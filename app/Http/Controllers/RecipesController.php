@@ -3,7 +3,6 @@
 use App\Recipe;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Recipe;
 use Carbon\Carbon;
 use Request;
 
@@ -25,7 +24,6 @@ class RecipesController extends Controller {
 
 	public function create()
 	{
-		return 'test';
 		return view('recipes.create');
 	}
 

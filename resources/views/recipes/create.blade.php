@@ -7,7 +7,7 @@
 
 	{!! Form::open(['url' => 'recipes']) !!}
 		<div class="form-group">
-		{!! Form::label('title,' 'Title:') !!} 
+		{!! Form::label('title', 'Title:') !!} 
 		{!! Form::text('PDF_set_info_title()', null, ['class' => 'form-control']) !!}
 		</div>
 
