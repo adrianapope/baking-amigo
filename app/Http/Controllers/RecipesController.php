@@ -32,9 +32,9 @@ class RecipesController extends Controller {
 		$input = Request::all();
 		$input['published_at'] = Carbon::now();
 		
-		Article::create($input);
+		Recipe::create($input);
 
-		return redirect('articles');
+		return redirect('recipes');
 	}
 		//$recipes = Recipe::with('ingredients')->get();
 		//return view('recipes.index', compact('recipes'));

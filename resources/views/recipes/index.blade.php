@@ -6,7 +6,6 @@
 	@foreach ($recipes as $recipe)
 		<article>
 			<h2>
-				{{ $recipe->title }}
 				{{-- hardcode it. referencing the URI --}}
 				<a href="/recipes/{{ $recipe->id }}">{{ $recipe->title }}</a> 
 

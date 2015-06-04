@@ -8,12 +8,12 @@
 	{!! Form::open(['url' => 'recipes']) !!}
 		<div class="form-group">
 		{!! Form::label('title', 'Title:') !!} 
-		{!! Form::text('PDF_set_info_title()', null, ['class' => 'form-control']) !!}
+		{!! Form::text('title', null, ['class' => 'form-control']) !!}
 		</div>
 
 		<div class="form-group">
-		{!! Form::label('body', 'Body:') !!}
-		{!! Form::textarea('body', null, ['class' => 'form-control']) !!}
+		{!! Form::label('description', 'Description:') !!}
+		{!! Form::textarea('description', null, ['class' => 'form-control']) !!}
 		</div>
 		
 		<div class="form-group">
