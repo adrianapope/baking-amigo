@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Recipe;
+
 class PageController extends Controller {
 
 	
@@ -15,9 +17,7 @@ class PageController extends Controller {
 
 	public function about()
 	{
-		$recipes = [
-			'Vegan Chocolate Cake', 'Raw Blueberry Cheesecake', 'Vegan Chocolate Chip Cookies'
-		];
+		$recipes = Recipe::all();
 
 		return view('pages.about', compact('recipes'));
 	}

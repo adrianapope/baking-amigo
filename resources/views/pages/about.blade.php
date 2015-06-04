@@ -8,7 +8,7 @@
 	<h3>My favorite baking recipes include:</h3>
 	<ul>
 		@foreach ($recipes as $recipe)
-		<li>{{ $recipe }}</li>
+		<li><a href="/recipes/{{ $recipe->id }}">{{ $recipe->title }}</a></li>
 		@endforeach
 	</ul>
 @endif
