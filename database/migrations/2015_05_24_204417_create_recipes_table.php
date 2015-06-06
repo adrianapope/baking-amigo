@@ -15,11 +15,19 @@ class CreateRecipesTable extends Migration {
 		Schema::create('recipes', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('title');
-			$table->text('excerpt')->nullable();
-			$table->text('description');
+			$table->string('name');
+			$table->text('description')->nullable();
+			$table->text('instructions');
+			$table->text('notes')->nullable();
 			$table->timestamps();
 			$table->timestamp('published_at');
+			$table->integer('prep_time');
+			$table->string('prep_time_type');
+			$table->integer('cook_time');
+			$table->string('cook_time_type');
+			$table->integer('ready_time');
+			$table->string('ready_time_type');
+			$table->integer('servings');  
 		});
 	}
 
