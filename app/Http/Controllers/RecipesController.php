@@ -19,6 +19,8 @@ class RecipesController extends Controller {
 	{
 		$recipe = Recipe::findOrFail($id);
 
+		//$recipe->published_at;
+
 		return view('recipes.show', compact('recipe'));
 	}
 

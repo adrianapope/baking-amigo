@@ -21,6 +21,8 @@ class Recipe extends Model {
 		'published_at'
 	];
 
+	protected $dates = ['published_at'];
+
 	public function ingredients()
 	{
 		return $this->hasMany('App\Ingredient');
