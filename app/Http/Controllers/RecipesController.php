@@ -10,7 +10,7 @@ class RecipesController extends Controller {
 
 	public function index()
 	{
-		$recipes = Recipe::latest('published_at')->get();
+		$recipes = Recipe::latest('published_at')->published()->get();
 
 		return view('recipes.index', compact('recipes'));
 	}
@@ -29,10 +29,7 @@ class RecipesController extends Controller {
 
 	public function store()
 	{
-		$input = Request::all();
-		$input['published_at'] = Carbon::now();
-		
-		Recipe::create($input);
+		Recipe::create(Request::all());
 
 		return redirect('recipes');
 	}
