@@ -2,12 +2,16 @@
 
 use App\Recipe;
 use App\Http\Requests;
+use App\Http\Requests\CreateRecipeRequest;
+use Illuminate\HttpResponse;
 use App\Http\Controllers\Controller;
-use Carbon\Carbon;
-use Request;
 
 class RecipesController extends Controller {
 
+	/**
+	* Show all recipes.
+	*
+	*/
 	public function index()
 	{
 		$recipes = Recipe::latest('published_at')->published()->get();
@@ -15,6 +19,10 @@ class RecipesController extends Controller {
 		return view('recipes.index', compact('recipes'));
 	}
 	
+	/**
+	* Show a single recipe.
+	*
+	*/
 	public function show($id)
 	{
 		$recipe = Recipe::findOrFail($id);
@@ -24,14 +32,24 @@ class RecipesController extends Controller {
 		return view('recipes.show', compact('recipe'));
 	}
 
+	/**
+	* Show the page to create a new recipe.
+	*
+	*/
 	public function create()
 	{
 		return view('recipes.create');
 	}
 
-	public function store()
+	/**
+	* Save a new recipe.
+	*
+	* @param CreateRecipeRequest $request
+	* @param Response
+	*/
+	public function store(CreateRecipeRequest $request)
 	{
-		Recipe::create(Request::all());
+		Recipe::create($request->all());
 
 		return redirect('recipes');
 	}
