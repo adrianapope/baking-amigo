@@ -55,4 +55,15 @@ class RecipesController extends Controller {
 	}
 		//$recipes = Recipe::with('ingredients')->get();
 		//return view('recipes.index', compact('recipes'));
+
+	/**
+	* Shows a page to edit an existing recipe
+	*
+	*/
+	public function edit($id)
+	{
+		$recipe = Recipe::findOrFail($id);
+
+		return view('recipes.edit', compact('recipe'));
+	}
 }
