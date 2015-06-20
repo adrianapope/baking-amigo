@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class CreateRecipeRequest extends Request {
+class RecipeRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
