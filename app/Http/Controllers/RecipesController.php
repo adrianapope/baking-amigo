@@ -1,9 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 use App\Recipe;
-use App\Http\Requests;
-use App\Http\Requests\CreateRecipeRequest;
-use Illuminate\HttpResponse;
+use Illuminate\Http\Request;
+use App\Http\Requests\RecipeRequest;
+use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 
 class RecipesController extends Controller {
@@ -18,7 +18,7 @@ class RecipesController extends Controller {
 
 		return view('recipes.index', compact('recipes'));
 	}
-	
+
 	/**
 	* Show a single recipe.
 	*
@@ -44,10 +44,10 @@ class RecipesController extends Controller {
 	/**
 	* Save a new recipe.
 	*
-	* @param CreateRecipeRequest $request
+	* @param RecipeRequest $request
 	* @param Response
 	*/
-	public function store(CreateRecipeRequest $request)
+	public function store(RecipeRequest $request)
 	{
 		Recipe::create($request->all());
 
@@ -65,5 +65,14 @@ class RecipesController extends Controller {
 		$recipe = Recipe::findOrFail($id);
 
 		return view('recipes.edit', compact('recipe'));
+	}
+
+	public function update($id, RecipeRequest $request)
+	{
+		$recipe = Recipe::findOrFail($id);
+
+		$recipe->update($request->all());
+
+		return redirect('recipes');
 	}
 }
