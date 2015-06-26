@@ -1,3 +1,9 @@
+			<!--Temporary -->
+			{!! Form::hidden('user_id', 1) !!}
+
+
+
+
 			<div class="form-group">
 				{!! Form::label('name', 'Recipe Name:') !!}
 				{!! Form::text('name', null, ['class' => 'form-control']) !!}
