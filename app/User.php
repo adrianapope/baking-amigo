@@ -31,4 +31,21 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
+	/**
+	* A user can have many recipes.
+	*
+	* @return \Illuminate\Database\Eloquent\Relations\HasMany
+	*/
+	
+	/**
+	* A user can have many recipes.
+	*
+	* @return \Iluminate\Database\Eloquent\Relations\HasMany
+	*/
+	public function recipes()
+	{
+		return $this->hasMany('App\Recipe');
+	}
+
 }
+

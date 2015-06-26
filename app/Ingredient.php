@@ -10,6 +10,11 @@ class Ingredient extends Model {
 		'user_id'
 	];
 
+	/**
+	* An ingredient is owned by a recipe.
+	*
+	* @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+	*/
 	public function recipe()
 	{
 		return $this->belongsTo('App\Recipe');
