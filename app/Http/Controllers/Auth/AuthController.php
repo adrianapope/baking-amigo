@@ -20,6 +20,10 @@ class AuthController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+    protected $redirectTo = '/recipes';
+
+
+
 	/**
 	 * Create a new authentication controller instance.
 	 *
