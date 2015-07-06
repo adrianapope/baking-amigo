@@ -5,30 +5,41 @@ use Illuminate\Http\Request;
 use App\Http\Requests\RecipeRequest;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
-class RecipesController extends Controller {
+class RecipesController extends Controller
+
+{
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => 'index']);
+    }
+
+
 
 	/**
 	* Show all recipes.
 	*
 	*/
 	public function index()
-	{
+    {
+
 		$recipes = Recipe::latest('published_at')->published()->get();
 
 		return view('recipes.index', compact('recipes'));
 	}
 
+
+
 	/**
 	* Show a single recipe.
 	*
-	*/
-	public function show($id)
+    * @param Recipe $recipe
+	* @return Response
+     */
+	public function show(Recipe $recipe)
 	{
-		$recipe = Recipe::findOrFail($id);
-
-		//$recipe->published_at;
-
 		return view('recipes.show', compact('recipe'));
 	}
 
@@ -41,6 +52,8 @@ class RecipesController extends Controller {
 		return view('recipes.create');
 	}
 
+
+
 	/**
 	* Save a new recipe.
 	*
@@ -49,28 +62,38 @@ class RecipesController extends Controller {
 	*/
 	public function store(RecipeRequest $request)
 	{
-		Recipe::create($request->all());
+
+        $recipe = new Recipe($request->all());
+
+        Auth::user()->recipes()->save($recipe);
 
 		return redirect('recipes');
+
 	}
-		//$recipes = Recipe::with('ingredients')->get();
-		//return view('recipes.index', compact('recipes'));
+
+
 
 	/**
 	* Shows a page to edit an existing recipe
 	*
+     * @param Recipe $recipe
+     * @return Response
 	*/
-	public function edit($id)
+	public function edit(Recipe $recipe)
 	{
-		$recipe = Recipe::findOrFail($id);
-
 		return view('recipes.edit', compact('recipe'));
 	}
 
-	public function update($id, RecipeRequest $request)
-	{
-		$recipe = Recipe::findOrFail($id);
 
+    /**
+     *  Update a recipe.
+     *
+     * @param Recipe $recipe
+     * @param RecipeRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector*
+     */
+	public function update(Recipe $recipe, RecipeRequest $request)
+	{
 		$recipe->update($request->all());
 
 		return redirect('recipes');
