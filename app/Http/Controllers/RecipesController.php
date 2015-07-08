@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Recipe;
+use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Requests\RecipeRequest;
 use Illuminate\Http\Response;
@@ -43,13 +44,16 @@ class RecipesController extends Controller
 		return view('recipes.show', compact('recipe'));
 	}
 
+
+
 	/**
 	* Show the page to create a new recipe.
 	*
 	*/
 	public function create()
 	{
-		return view('recipes.create');
+		$tags = Tag::lists('name', 'id');  //we fetch our tags and use the method called lists. give me an array of all the values from a column (in this case we'll do 'name')
+        return view('recipes.create', compact('tags')); //we'll pass 'tags' through to the view
 	}
 
 
@@ -63,7 +67,17 @@ class RecipesController extends Controller
 	public function store(RecipeRequest $request)
 	{
 
-        Auth::user()->recipes()->create($request->all());
+        $recipe = Auth::user()->recipes()->create($request->all()); //get all the recipes from the user and create a new recipe. saved as $recipe variable.
+
+        // $tagIds = $request->input('tags'); //get all the tags. this is an array of all the tags that the user wants to add to the recipe. saved as $tagsIds variable.
+        // $recipe->tags()->attach($tagIds); //get all the tags and attach the tagsIds
+
+       $recipe->tags()->attach($request->input('tags'));
+
+
+        // we in-lined the variable and made the above two lines of code one line of code.
+        // recipe, for the tags pivot table, i want to associate you specifically (that recipe_Id) with this array of 'tags'
+        // when we call attach() you can pass a single integer like attach(1) which is the id or an array of ids like we did.
 
 	    session()->flash('flash_message', 'Your recipe has been created!');
 
@@ -89,7 +103,6 @@ class RecipesController extends Controller
         */
 
         return redirect('recipes');
-
     }
 
 
