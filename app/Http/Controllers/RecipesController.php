@@ -53,6 +53,7 @@ class RecipesController extends Controller
 	public function create()
 	{
 		$tags = Tag::lists('name', 'id');  //we fetch our tags and use the method called lists. give me an array of all the values from a column (in this case we'll do 'name')
+        
         return view('recipes.create', compact('tags')); //we'll pass 'tags' through to the view
 	}
 
@@ -72,7 +73,7 @@ class RecipesController extends Controller
         // $tagIds = $request->input('tags'); //get all the tags. this is an array of all the tags that the user wants to add to the recipe. saved as $tagsIds variable.
         // $recipe->tags()->attach($tagIds); //get all the tags and attach the tagsIds
 
-       $recipe->tags()->attach($request->input('tags'));
+       $recipe->tags()->attach($request->input('tag_list')); //we get the existing recipe, we find its related tags, and then we attach a new one in that pivot table.
 
 
         // we in-lined the variable and made the above two lines of code one line of code.
@@ -115,7 +116,9 @@ class RecipesController extends Controller
 	*/
 	public function edit(Recipe $recipe)
 	{
-		return view('recipes.edit', compact('recipe'));
+		$tags = Tag::lists('name', 'id');
+
+		return view('recipes.edit', compact('recipe', 'tags'));
 	}
 
 
@@ -129,6 +132,9 @@ class RecipesController extends Controller
 	public function update(Recipe $recipe, RecipeRequest $request)
 	{
 		$recipe->update($request->all());
+
+		$recipe->tags()->sync($request->input('tag_list'));  // we provide an array of tagIds and only those ids will be associated with the recipe in the pivot table. anything else in the table will be deleted. 
+															 // that means laravel will take care of the deleting and the adding automatically for you.
 
 		return redirect('recipes');
 	}
