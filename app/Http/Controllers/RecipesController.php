@@ -63,13 +63,34 @@ class RecipesController extends Controller
 	public function store(RecipeRequest $request)
 	{
 
-        $recipe = new Recipe($request->all());
+        Auth::user()->recipes()->create($request->all());
 
-        Auth::user()->recipes()->save($recipe);
+	    session()->flash('flash_message', 'Your recipe has been created!');
 
-		return redirect('recipes');
+        session()->flash('flash_message_important', true);
 
-	}
+
+        //#2 way of doing this
+        // use this with the package laracasts/flash
+        // and add the service provider and facade under config file->app
+        // also use this along with adding @include('flash::message') to the app.blade.php file
+/*        flash()->success('Your recipe has been successfully created!');*/
+        /*//same as using the facade approach below
+        \Flash::success();
+        \Flash::error();
+        \Flash::info();*/
+
+        // #3 way of doing this
+        // use this along with a modal in the app.blade.php file
+        // this is an overlay message. there is a message plus a heading.
+        // you have to fetch the modal
+        // on the app.blade.php file, we are using a little bootstrap. reference the script and activiate the plug in so to speak
+        /*   flash()->overlay('Thanks for contributing! Your recipe has been created.', 'Success!');
+        */
+
+        return redirect('recipes');
+
+    }
 
 
 
