@@ -61,5 +61,15 @@ class Recipe extends Model {
 	{
 		$this->attributes['published_at'] = Carbon::parse($date);
 	}
+
+    /**
+     * Get the tags associated with the given recipe.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag')->withTimestamps();
+    }
 }
 
