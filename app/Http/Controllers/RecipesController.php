@@ -11,7 +11,10 @@ use Illuminate\Support\Facades\Auth;
 class RecipesController extends Controller
 
 {
-
+	/**
+	* Create a new recipes controller instance.
+	*
+	*/
     public function __construct()
     {
         $this->middleware('auth', ['except' => 'index']);
@@ -67,18 +70,7 @@ class RecipesController extends Controller
 	*/
 	public function store(RecipeRequest $request)
 	{
-
-        $recipe = Auth::user()->recipes()->create($request->all()); //get all the recipes from the user and create a new recipe. saved as $recipe variable.
-
-        // $tagIds = $request->input('tags'); //get all the tags. this is an array of all the tags that the user wants to add to the recipe. saved as $tagsIds variable.
-        // $recipe->tags()->attach($tagIds); //get all the tags and attach the tagsIds
-
-       $recipe->tags()->attach($request->input('tag_list')); //we get the existing recipe, we find its related tags, and then we attach a new one in that pivot table.
-
-
-        // we in-lined the variable and made the above two lines of code one line of code.
-        // recipe, for the tags pivot table, i want to associate you specifically (that recipe_Id) with this array of 'tags'
-        // when we call attach() you can pass a single integer like attach(1) which is the id or an array of ids like we did.
+		$this->createRecipe($request);
 
 	    session()->flash('flash_message', 'Your recipe has been created!');
 
@@ -133,9 +125,37 @@ class RecipesController extends Controller
 	{
 		$recipe->update($request->all());
 
-		$recipe->tags()->sync($request->input('tag_list'));  // we provide an array of tagIds and only those ids will be associated with the recipe in the pivot table. anything else in the table will be deleted. 
+		//$recipe->tags()->sync($request->input('tag_list'));  // we provide an array of tagIds and only those ids will be associated with the recipe in the pivot table. anything else in the table will be deleted. 
 															 // that means laravel will take care of the deleting and the adding automatically for you.
 
+		$this->syncTags($recipe, $request->input('tag_list'));
+
 		return redirect('recipes');
+	}
+
+
+
+	/**
+	* Sync up the list of tags in the databse.
+	*
+	*/
+	private function syncTags(Recipe $recipe, array $tags)
+	{
+		$recipe->tags()->sync($tags);
+	}
+
+	/**
+	* Create and persist a new recipe.
+	*
+	* @param  RecipeRequest $request
+	* @return mixed
+	*/
+	private function createRecipe(RecipeRequest $request)
+	{
+		$recipe = Auth::user()->recipe()->create($request->all());
+
+		$this->syncTags($recipe, $request->input('tag_list'));
+
+		return $recipe;
 	}
 }
