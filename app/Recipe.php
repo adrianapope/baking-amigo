@@ -71,5 +71,19 @@ class Recipe extends Model {
     {
         return $this->belongsToMany('App\Tag')->withTimestamps();
     }
+
+    // if we say tag_list or tagList it would trigger this method
+    // get an array of the ids of the tags associated with this recipe.
+    // we will switch the form to say tag_list instead of 'tags'
+    
+    /**
+    * Get the tags associated with the given recipe.
+    * @return array
+    */
+    public function getTagListAttribute()
+    {
+    	return $this->tags->lists('id');
+    }
+
 }
 
