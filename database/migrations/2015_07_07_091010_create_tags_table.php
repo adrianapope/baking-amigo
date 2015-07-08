@@ -20,12 +20,14 @@ class CreateTagsTable extends Migration {
 
 //singular and alphabetical order
         Schema::create('recipe_tag', function (Blueprint $table) {
+
             $table->integer('recipe_id')->unsigned()->index();
             $table->foreign('recipe_id')->references('id')->on('recipes')->onDelete('cascade');
 
             $table->integer('tag_id')->unsigned()->index();
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
             $table->timestamps();
+
         });
      }
 
