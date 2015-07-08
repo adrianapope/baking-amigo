@@ -28,6 +28,15 @@
 
 		<h2>Servings:</h2>
 		{{ $recipe->servings }}
+
+		@unless ($recipe->tags->isEmpty())
+		<h5>Tags:</h5>
+		<ul>
+			@foreach ($recipe->tags as $tag)
+				<li>{{ $tag->name }}</li>
+			@endforeach
+		</ul>
+		@endunless
 	</article>
 
 @stop
