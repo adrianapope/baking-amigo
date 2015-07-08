@@ -1,5 +1,13 @@
 <?php
 
+/*Route::get('/test', function()
+{
+    $recipe = App\Recipe::whereId(42)->with('tags')->first();
+
+    $recipe->tags()->sync([1, 2, 3, 5]);
+    return dd($recipe);
+});*/
+
 # Home
 
 Route::get('/', 'PageController@index');
