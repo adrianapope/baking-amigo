@@ -134,14 +134,13 @@ class RecipesController extends Controller
 	}
 
 
-
 	/**
 	* Sync up the list of tags in the databse.
 	*
 	*/
 	private function syncTags(Recipe $recipe, array $tags)
 	{
-		$recipe->tags()->sync($tags);
+		$recipe->tags()->sync((array) $tags);
 	}
 
 	/**
