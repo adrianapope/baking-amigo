@@ -1,0 +1,290 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'jspm', '-g' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 verbose node symlink /usr/bin/node
+5 silly cache add args [ 'jspm', null ]
+6 verbose cache add spec jspm
+7 silly cache add parsed spec { raw: 'jspm',
+7 silly cache add   scope: null,
+7 silly cache add   name: 'jspm',
+7 silly cache add   rawSpec: '',
+7 silly cache add   spec: '*',
+7 silly cache add   type: 'range' }
+8 verbose addNamed jspm@*
+9 silly addNamed semver.valid null
+10 silly addNamed semver.validRange *
+11 silly addNameRange { name: 'jspm', range: '*', hasData: false }
+12 silly mapToRegistry name jspm
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/jspm
+16 verbose addNameRange registry:https://registry.npmjs.org/jspm not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/jspm
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 05:10:17
+20 verbose request id 54311e5bddbe8f8e
+21 verbose etag "8N62NIIZSG1EYTZ199NPBEN0J"
+22 http request GET https://registry.npmjs.org/jspm
+23 http 304 https://registry.npmjs.org/jspm
+24 silly get cb [ 304,
+24 silly get   { date: 'Thu, 09 Jul 2015 05:10:12 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     'cache-control': 'max-age=60',
+24 silly get     etag: '"8N62NIIZSG1EYTZ199NPBEN0J"',
+24 silly get     age: '0',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-sin6921-SIN',
+24 silly get     'x-cache': 'MISS',
+24 silly get     'x-cache-hits': '0',
+24 silly get     'x-timer': 'S1436418612.583257,VS0,VE221',
+24 silly get     vary: 'Accept' } ]
+25 verbose etag https://registry.npmjs.org/jspm from cache
+26 verbose get saving jspm to /home/vagrant/.npm/registry.npmjs.org/jspm/.cache.json
+27 silly addNameRange number 2 { name: 'jspm', range: '*', hasData: true }
+28 silly addNameRange versions [ 'jspm',
+28 silly addNameRange   [ '0.0.1',
+28 silly addNameRange     '0.0.2',
+28 silly addNameRange     '0.0.3',
+28 silly addNameRange     '0.0.4',
+28 silly addNameRange     '0.0.5',
+28 silly addNameRange     '0.0.6',
+28 silly addNameRange     '0.0.7',
+28 silly addNameRange     '0.0.8',
+28 silly addNameRange     '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.3.1',
+28 silly addNameRange     '0.3.2',
+28 silly addNameRange     '0.3.3',
+28 silly addNameRange     '0.3.4',
+28 silly addNameRange     '0.3.5',
+28 silly addNameRange     '0.3.6',
+28 silly addNameRange     '0.3.7',
+28 silly addNameRange     '0.3.8',
+28 silly addNameRange     '0.3.9',
+28 silly addNameRange     '0.3.10',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.4.2',
+28 silly addNameRange     '0.4.3',
+28 silly addNameRange     '0.5.0-beta',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.5.1',
+28 silly addNameRange     '0.5.2',
+28 silly addNameRange     '0.5.3',
+28 silly addNameRange     '0.5.4',
+28 silly addNameRange     '0.5.5',
+28 silly addNameRange     '0.5.6',
+28 silly addNameRange     '0.5.7',
+28 silly addNameRange     '0.5.8',
+28 silly addNameRange     '0.5.9',
+28 silly addNameRange     '0.5.10',
+28 silly addNameRange     '0.5.11',
+28 silly addNameRange     '0.5.12',
+28 silly addNameRange     '0.5.13',
+28 silly addNameRange     '0.5.14',
+28 silly addNameRange     '0.5.15',
+28 silly addNameRange     '0.5.16',
+28 silly addNameRange     '0.6.0',
+28 silly addNameRange     '0.6.1',
+28 silly addNameRange     '0.6.2',
+28 silly addNameRange     '0.6.3',
+28 silly addNameRange     '0.6.4',
+28 silly addNameRange     '0.6.5',
+28 silly addNameRange     '0.6.6',
+28 silly addNameRange     '0.6.7',
+28 silly addNameRange     '0.6.8',
+28 silly addNameRange     '0.6.9',
+28 silly addNameRange     '0.6.10',
+28 silly addNameRange     '0.6.11',
+28 silly addNameRange     '0.6.12',
+28 silly addNameRange     '0.7.0-beta.1',
+28 silly addNameRange     '0.7.0-beta.2',
+28 silly addNameRange     '0.7.0-beta.3',
+28 silly addNameRange     '0.7.0-beta.4',
+28 silly addNameRange     '0.7.0-beta.5',
+28 silly addNameRange     '0.7.0-beta.6',
+28 silly addNameRange     '0.7.0-beta.7',
+28 silly addNameRange     '0.7.0-beta.8',
+28 silly addNameRange     '0.7.0-beta.9',
+28 silly addNameRange     '0.7.0-beta.10',
+28 silly addNameRange     '0.6.13',
+28 silly addNameRange     '0.7.0-beta.11',
+28 silly addNameRange     '0.7.0-beta.12',
+28 silly addNameRange     '0.7.0-beta.13',
+28 silly addNameRange     '0.7.0-beta.14',
+28 silly addNameRange     '0.7.0-beta.15',
+28 silly addNameRange     '0.7.0-beta.16',
+28 silly addNameRange     '0.7.0-beta.17',
+28 silly addNameRange     '0.7.0-beta.18',
+28 silly addNameRange     '0.7.0-beta.19',
+28 silly addNameRange     '0.7.0-beta.20',
+28 silly addNameRange     '0.7.0',
+28 silly addNameRange     '0.7.1',
+28 silly addNameRange     '0.8.0-beta.1',
+28 silly addNameRange     '0.8.0-beta.2',
+28 silly addNameRange     '0.8.0-beta.3',
+28 silly addNameRange     '0.8.0-beta.4',
+28 silly addNameRange     '0.7.2',
+28 silly addNameRange     '0.8.0-beta.5',
+28 silly addNameRange     '0.8.0-beta.6',
+28 silly addNameRange     '0.7.3',
+28 silly addNameRange     '0.8.0-beta.7',
+28 silly addNameRange     '0.8.0-beta.8',
+28 silly addNameRange     '0.8.0-beta.9',
+28 silly addNameRange     '0.8.0-beta.10',
+28 silly addNameRange     '0.8.0-beta.11',
+28 silly addNameRange     '0.8.0-beta.12',
+28 silly addNameRange     '0.8.0',
+28 silly addNameRange     '0.8.1',
+28 silly addNameRange     '0.8.2',
+28 silly addNameRange     '0.8.3',
+28 silly addNameRange     '0.8.4',
+28 silly addNameRange     '0.9.0-beta.1',
+28 silly addNameRange     '0.8.5',
+28 silly addNameRange     '0.9.0-beta.2',
+28 silly addNameRange     '0.8.6',
+28 silly addNameRange     '0.9.0',
+28 silly addNameRange     '0.10.0',
+28 silly addNameRange     '0.10.1',
+28 silly addNameRange     '0.10.2',
+28 silly addNameRange     '0.10.3',
+28 silly addNameRange     '0.10.4',
+28 silly addNameRange     '0.10.5',
+28 silly addNameRange     '0.10.6',
+28 silly addNameRange     '0.11.0',
+28 silly addNameRange     '0.11.1',
+28 silly addNameRange     '0.11.2',
+28 silly addNameRange     '0.11.3',
+28 silly addNameRange     '0.11.4',
+28 silly addNameRange     '0.11.5',
+28 silly addNameRange     '0.11.6',
+28 silly addNameRange     '0.12.0',
+28 silly addNameRange     '0.13.0',
+28 silly addNameRange     '0.13.1',
+28 silly addNameRange     '0.13.2',
+28 silly addNameRange     '0.13.3',
+28 silly addNameRange     '0.13.4',
+28 silly addNameRange     '0.14.0',
+28 silly addNameRange     '0.15.0-beta',
+28 silly addNameRange     '0.15.0',
+28 silly addNameRange     '0.15.1',
+28 silly addNameRange     '0.15.2',
+28 silly addNameRange     '0.15.3',
+28 silly addNameRange     '0.15.4',
+28 silly addNameRange     '0.15.5',
+28 silly addNameRange     '0.15.6',
+28 silly addNameRange     '0.16.0-beta',
+28 silly addNameRange     '0.15.7',
+28 silly addNameRange     '0.16.0-beta.2',
+28 silly addNameRange     '0.16.0-beta.3' ] ]
+29 verbose addNamed jspm@0.15.7
+30 silly addNamed semver.valid 0.15.7
+31 silly addNamed semver.validRange 0.15.7
+32 silly cache afterAdd jspm@0.15.7
+33 verbose afterAdd /home/vagrant/.npm/jspm/0.15.7/package/package.json not in flight; writing
+34 verbose afterAdd /home/vagrant/.npm/jspm/0.15.7/package/package.json written
+35 silly install resolved [ { name: 'jspm',
+35 silly install resolved     description: 'Registry and format agnostic JavaScript package manager',
+35 silly install resolved     version: '0.15.7',
+35 silly install resolved     main: './api.js',
+35 silly install resolved     author: '',
+35 silly install resolved     dependencies:
+35 silly install resolved      { chalk: '^1.0.0',
+35 silly install resolved        'core-js': '^0.7.2',
+35 silly install resolved        glob: '^5.0.3',
+35 silly install resolved        'graceful-fs': '^3.0.6',
+35 silly install resolved        'jspm-github': '^0.11.4',
+35 silly install resolved        'jspm-npm': '^0.21.4',
+35 silly install resolved        'jspm-registry': '^0.4.0',
+35 silly install resolved        liftoff: '^2.0.2',
+35 silly install resolved        minimatch: '^2.0.4',
+35 silly install resolved        mkdirp: '~0.5.0',
+35 silly install resolved        ncp: '^2.0.0',
+35 silly install resolved        request: '^2.53.0',
+35 silly install resolved        rimraf: '^2.3.2',
+35 silly install resolved        rsvp: '^3.0.17',
+35 silly install resolved        semver: '^4.3.2',
+35 silly install resolved        systemjs: '^0.16.9',
+35 silly install resolved        'systemjs-builder': '^0.10.6',
+35 silly install resolved        traceur: '0.0.88',
+35 silly install resolved        'uglify-js': '~2.4.17' },
+35 silly install resolved     registry: 'npm',
+35 silly install resolved     devDependencies: { istanbul: '^0.3.13', jshint: '~2.6.1', mocha: '~2.2.4' },
+35 silly install resolved     repository: { type: 'git', url: 'https://github.com/jspm/jspm.git' },
+35 silly install resolved     bin: { jspm: './jspm.js' },
+35 silly install resolved     scripts:
+35 silly install resolved      { test: 'npm run jshint && npm run mocha',
+35 silly install resolved        istanbul: 'istanbul cover ./node_modules/.bin/_mocha -i=\'lib/**/*.js\'',
+35 silly install resolved        coverage: 'npm run istanbul -- --report html',
+35 silly install resolved        mocha: 'mocha',
+35 silly install resolved        jshint: 'jshint api.js cli.js jspm.js lib test' },
+35 silly install resolved     bugs: { url: 'https://github.com/jspm/jspm/issues' },
+35 silly install resolved     homepage: 'https://github.com/jspm/jspm',
+35 silly install resolved     directories: { test: 'test' },
+35 silly install resolved     license: 'Apache 2.0',
+35 silly install resolved     gitHead: '311bf28a72d279a35fe910ebefee3369d70e992d',
+35 silly install resolved     _id: 'jspm@0.15.7',
+35 silly install resolved     _shasum: '783bfca6e28036cb21d467c5b5f0460bb3dbb36f',
+35 silly install resolved     _from: 'jspm@*',
+35 silly install resolved     _npmVersion: '2.5.1',
+35 silly install resolved     _nodeVersion: '0.12.0',
+35 silly install resolved     _npmUser: { name: 'guybedford', email: 'guybedford@gmail.com' },
+35 silly install resolved     dist:
+35 silly install resolved      { shasum: '783bfca6e28036cb21d467c5b5f0460bb3dbb36f',
+35 silly install resolved        tarball: 'http://registry.npmjs.org/jspm/-/jspm-0.15.7.tgz' },
+35 silly install resolved     maintainers: [ [Object] ],
+35 silly install resolved     _resolved: 'https://registry.npmjs.org/jspm/-/jspm-0.15.7.tgz',
+35 silly install resolved     readme: 'ERROR: No README data found!' } ]
+36 info install jspm@0.15.7 into /usr/lib
+37 info installOne jspm@0.15.7
+38 verbose installOne of jspm to /usr/lib not in flight; installing
+39 verbose lock using /home/vagrant/.npm/_locks/jspm-3019077cf4e37579.lock for /usr/lib/node_modules/jspm
+40 silly install write writing jspm 0.15.7 to /usr/lib/node_modules/jspm
+41 silly cache addNamed cb jspm@0.15.7
+42 verbose unbuild lib/node_modules/jspm
+43 silly gentlyRm /usr/lib/node_modules/jspm is being purged from base /usr
+44 verbose gentlyRm don't care about contents; nuking /usr/lib/node_modules/jspm
+45 verbose tar unpack /home/vagrant/.npm/jspm/0.15.7/package.tgz
+46 verbose tar unpacking to /usr/lib/node_modules/jspm
+47 silly gentlyRm /usr/lib/node_modules/jspm is being purged
+48 verbose gentlyRm don't care about contents; nuking /usr/lib/node_modules/jspm
+49 silly gunzTarPerm modes [ '775', '664' ]
+50 error tar.unpack untar error /home/vagrant/.npm/jspm/0.15.7/package.tgz
+51 verbose unlock done using /home/vagrant/.npm/_locks/jspm-3019077cf4e37579.lock for /usr/lib/node_modules/jspm
+52 verbose fstream_path /usr/lib/node_modules/jspm
+53 verbose fstream_type Directory
+54 verbose fstream_class DirWriter
+55 verbose stack Error: EACCES, mkdir '/usr/lib/node_modules/jspm'
+55 verbose stack     at Error (native)
+56 verbose fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+56 verbose fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+56 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+57 verbose cwd /home/vagrant/Code/recipes/resources/css/libs/js/libs
+58 error Linux 3.16.0-23-generic
+59 error argv "/usr/bin/node" "/usr/bin/npm" "install" "jspm" "-g"
+60 error node v0.12.2
+61 error npm  v2.7.4
+62 error path /usr/lib/node_modules/jspm
+63 error code EACCES
+64 error errno -13
+65 error Error: EACCES, mkdir '/usr/lib/node_modules/jspm'
+65 error     at Error (native)
+65 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/jspm']
+65 error   errno: -13,
+65 error   code: 'EACCES',
+65 error   path: '/usr/lib/node_modules/jspm',
+65 error   fstream_type: 'Directory',
+65 error   fstream_path: '/usr/lib/node_modules/jspm',
+65 error   fstream_class: 'DirWriter',
+65 error   fstream_stack:
+65 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+65 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+65 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+66 error Please try running this command again as root/Administrator.
+67 verbose exit [ -13, true ]
+68 verbose unbuild lib/node_modules/jspm
+69 silly gentlyRm /usr/lib/node_modules/jspm is being purged from base /usr
+70 verbose gentlyRm don't care about contents; nuking /usr/lib/node_modules/jspm

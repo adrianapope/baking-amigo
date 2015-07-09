@@ -1,0 +1,1 @@
+{"version":3,"sources":["normalize.css","app.css"],"names":[],"mappings":"AAAA;AACA;AACA;ACFA;AACA;AACA;AACA;AACA;AACA;AACA","file":"final.css","sourcesContent":[".normalize {\n\tmargin: 0;\n}","body {\n  padding-top: 90px; }\n\nbody, label, .checkbox label {\n  font-weight: 300; }\n\n/*# sourceMappingURL=app.css.map */"],"sourceRoot":"/source/"}

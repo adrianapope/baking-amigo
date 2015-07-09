@@ -1,0 +1,12 @@
+.normalize {
+	margin: 0;
+}
+body {
+  padding-top: 40px;
+  color: purple; }
+
+body, label, .checkbox label {
+  font-weight: 300; }
+
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=all.css.map */
