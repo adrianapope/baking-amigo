@@ -11,13 +11,15 @@ var elixir = require('laravel-elixir');
  |
  */
 
-//  NEW STUFF IM WORKING ON LEAVE!!!
-/* elixir(function(mix) {
+//  NEW STUFF IM WORKING ON 
+// first argument the src files, second argument the output path which is 'resources/css'
+
+
+  elixir(function(mix) {
 
   mix.sass('app.scss', 'resources/css');
 
-
-    mix.styles([
+  mix.styles([
         'libs/bootstrap.min.css',
         'app.css',
         'libs/select2.min.css'
@@ -29,7 +31,8 @@ var elixir = require('laravel-elixir');
     ]);
 
 });
-*/
+
+
 // PHPUNIT TEST
 // you can use phpUnit to test stuff. you can see if things pass or fail. check in the tests directory...and ExampleTest.php to see
 // what it is looking for. you can all run gulp tdd' in terminal which is like 'gulp watch' it runs automtically and when you makes changes it will tellyou green light or red light 
