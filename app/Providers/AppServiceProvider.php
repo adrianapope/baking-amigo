@@ -1,5 +1,6 @@
 <?php namespace App\Providers;
 
+use App\Recipe;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
@@ -11,7 +12,7 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		//
+
 	}
 
 	/**
@@ -20,7 +21,9 @@ class AppServiceProvider extends ServiceProvider {
 	 * This service provider is a great spot to register your various container
 	 * bindings with the application. As you can see, we are registering our
 	 * "Registrar" implementation here. You can add your own bindings too!
-	 *
+	 * how we bind things into laravel's service container (IOC container)
+	 * how we associate interfaces with specific concrete classes. 
+	 * everytime i request this kind of class, i want to make sure that you build it up in this specific fashion
 	 * @return void
 	 */
 	public function register()
