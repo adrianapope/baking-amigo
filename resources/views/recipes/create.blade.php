@@ -6,7 +6,7 @@
 	<hr/>
 
 	<div class="row">
-		{!! Form::open(['url' => 'recipes', 'class' => 'col-sm-6']) !!}
+		{!! Form::model($recipe = new \App\Recipe, ['url' => 'recipes', 'class' => 'col-sm-6']) !!}
 			@include ('recipes.form', ['submitButtonText' => 'Submit Recipe'])
 		{!! Form::close() !!}
 	</div>
