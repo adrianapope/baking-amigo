@@ -57,9 +57,26 @@ class Recipe extends Model {
 	// the time will be added as well if that makes sense for your project
 	// format is $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d', $date);
 	// if you want to set it in the future and publish at midnight do Carbon::parse($date);
+
+	/**
+	* Set the published_at attribute (this is a setter)
+	*
+	* @ param $date
+	*/
 	public function setPublishedAtAttribute($date)
 	{
 		$this->attributes['published_at'] = Carbon::parse($date);
+	}
+
+	/**
+	* Get the published_at attribute. Ensures we have an instance of Carbon.
+	*
+	* @param $date
+	* @ return string
+	*/
+	public function getPublishedAtAttribute($date)
+	{
+		return Carbon::parse($date)->format('Y-m-d');
 	}
 
     /**
