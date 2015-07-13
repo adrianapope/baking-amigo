@@ -1,5 +1,8 @@
 <?php
 
+// repository example workflow
+// we'll create a new controller here.
+
 Route::get('foo', 'FooController@foo');
 
 
@@ -106,7 +109,7 @@ class SecondBar implements BarInterface {}*/
 // and then we have App::make for resolving it out of the container
 // so we have App::bind for binding something into the container
 // you bind into the container, and then when you want it back, you resolve it out of the container
-// 
+//
 
 /*App::bind('Bar', function()
 {
@@ -150,6 +153,10 @@ Route::post('recipes/{id}', ['as' => 'recipes.update', 'uses' => 'RecipesControl
 
 Route::resource('recipes', 'RecipesController');
 
+# Tags
+
+Route::get('tags/{tags}', 'TagsController@show');
+
 # Auth
 
 Route::controllers([
@@ -163,4 +170,8 @@ Route::get('foo', ['middleware' => 'manager', function()
 {
     return 'this page may only be viewed by managers';
 }]);
+
+
+
+
 
