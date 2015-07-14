@@ -21,9 +21,16 @@ class Kernel extends ConsoleKernel {
 	 * @return void
 	 */
 	protected function schedule(Schedule $schedule)
+	// in order to email the output, we have to have saved the output.
+	// command method just calls $this->exec behind the scenes
+
 	{
 		$schedule->command('inspire')
 				 ->hourly();
+		/*$schedule->command('laracasts:sample')->at('10:30');
+
+		$schedule->command('laracasts:clear-history')->monthly()->sendOutputTo('path/to/file')->emailOutputTo('');
+		$schedule->command('laracasts:daily-report')->dailyAt('23:55');*/
 	}
 
 }
