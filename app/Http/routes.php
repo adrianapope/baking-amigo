@@ -1,5 +1,8 @@
 <?php
 
+use App\Events\UserWasBanned;
+
+
 // repository example workflow
 // we'll create a new controller here.
 
@@ -170,6 +173,36 @@ Route::get('foo', ['middleware' => 'manager', function()
 {
     return 'this page may only be viewed by managers';
 }]);
+
+# Events
+
+// we will fire an event.
+// pass it through as a string, then pass through your data
+/*Route::get('/', function () {
+	Event::fire('UserWasBanned', [])
+});*/
+
+// second way of doing this (the newest way)
+// i like using objects
+// new up a class and then pass through whatever it needs through the constructor
+// we can use the helper function event() which just delegates to app(events)->fire anyways
+// we imported class use App\Events\UserWasBanned;
+// if we ban a use, we need to pass through the user who was banned.
+// when you want to fire an event or make an announcement that something just took place, you reference
+// your event function and then you new up the event object thatyou created, then you can pass through anything that it requires. often it will be just an id or something
+// behind the scenes, laravel will take care of the rest
+// so if we go to chrome, recipes.app:8000 we'll get string 'Notify  that they have banned from the site.' (length=44)
+// we fired the event and becuase we had a listener registered on it, this class was instantiated or resolved out of the container ('EmailBanNotification')
+// and then a handle method was triggered. var_dump('Notify ' . $event->user->name . ' that they have banned from the site.');
+// event fired (UserWasBanned) -> listener instantiated (EmailBanNotification) -> handle method triggered 	public function handle(UserWasBanned $event)
+
+Route::get('/', function() {
+
+	$user = new App\User;
+
+	event(new UserWasBanned($user));
+
+});
 
 
 
