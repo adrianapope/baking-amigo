@@ -219,6 +219,8 @@ dd(app()['config']['database']['default']);
 // you can refer to the concrete class or the contract if you need to be as coupled as possible.
 
 // here we are using the Config facade. simple way
+// not locked to any specific driver or implementation.
+// maximum decoupling.
 // we get mysql in the browser
 /*Route::get('/', function() {
 	dd(Config::get('database.default'));
@@ -238,6 +240,9 @@ dd(app()['config']['database']['default']);
 });*/
 
 // here we are using an interface/contract
+// we are referencing a contract, or an abstract key, it's really just an identifier
+// if you are ever wondering where the Contracts should go, you just append Contracts after Illuminate and it will be the exact same thing 
+// vis versa, if you take off Contracts, you can most likely find one of the concrete implementation at Illuminate\Config\Repository
 // we want to use this interface Repository.php (look for Contracts/Config/Repository)
 // if i were to build this up, and then die and dump it and view in chrome...what happens? we get all the attributes listed
 // for some large projects, you want some very clearly defined interfaces and boundries. so in those cases and when and only if it makes sense for your project
@@ -247,15 +252,19 @@ dd(app()['config']['database']['default']);
 	dd(app('Illuminate\Contracts\Config\Repository')['database']['default']);
 });*/
 
-// fourth way of doing this is ('config')
+// fourth way of doing this is to reference a general key word('config')
 // once again we get the same exact thing mysql in the browser
 /*Route::get('/', function() {
 	dd(app('config')['database']['default']);
 });*/
 
 // fifth way
-// imagine we already have an app instance and then we can use the ArrayAccess feature of php which laravel's container implements
-// if you look at Container.php you will see that ArrayAccess implements ArrayAccess
+// imagine we already have an $app instance (which we don't here) so we can just do (app()) like that
+// and then we can use the ArrayAccess feature of php which laravel's container implements
+// if you look at Container.php you will see that it implements ArrayAccess
+// that means when you try to access a key on the app object (in this case) it will call an offsetGet() and you are passing in $config as the key
+// so it is basically going to be doing something like this app make the key app($key); or App:make($key); or we passed in config so App::make('config');
+// it implements ArrayAccess to make it easy for us to use
 /*Route::get('/', function() {
 	dd(app()['config']['database']['default']);
 });*/
