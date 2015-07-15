@@ -160,6 +160,7 @@ Route::resource('recipes', 'RecipesController');
 
 Route::get('tags/{tags}', 'TagsController@show');
 
+
 # Auth
 
 Route::controllers([
@@ -204,7 +205,65 @@ Route::get('/', function() {
 
 });
 
+# App Function (Illuminate Contracts/Interfaces)
+/*dd(Config::get('database.default'));
+dd(app('Illuminate\Config\Repository')['database']['default']);
+dd(app('Illuminate\Contracts\Config\Repository')['database']['default']);
+dd(app('config')['database']['default']);
+dd(app()['config']['database']['default']);
+*/
+
+// general info. five different ways listed below on how to fetch our configuration compositories
+// app is a helper function that is a nice wrapper around app($make)
+// it use to be App::make() but now it's just app() you just pas in the name of the identifier or the class as a string that you want to sesolve
+// you can refer to the concrete class or the contract if you need to be as coupled as possible.
+
+// here we are using the Config facade. simple way
+// we get mysql in the browser
+/*Route::get('/', function() {
+	dd(Config::get('database.default'));
+});*/
+
+// here we will reference the actual concrete class. how? we know it is Illuminate\Config\Repository and so the concrete class is 
+// class Repository of this particular contract called ConfigContract
+// what you see here is one way of fetching configuration and it happens to be the default way in laravel. you don't need to really change it ever.
+// if you wanted a custom way of dealing with configuration... what would you do?
+// to use your own config methodology...if we use this concept of contracts and interfaces (if we think about in terms of these bindings) you could create your own class that adheres to this specific contract
+// and then as part of your bootstrap process, you only need to hook into laravel and tell it whenever you need an implementation of this contract, use this custom one that i have built
+// when it needs to fetch config, it will use yours and not the default one
+// that means to fetch the default driver you just have to tack on ['database']['default'] and you'll get 'mysql' in the browser
+/*Route::get('/', function() {
+
+	dd(app('Illuminate\Config\Repository')['database']['default']); // this is a concrete class Repository
+});*/
+
+// here we are using an interface/contract
+// we want to use this interface Repository.php (look for Contracts/Config/Repository)
+// if i were to build this up, and then die and dump it and view in chrome...what happens? we get all the attributes listed
+// for some large projects, you want some very clearly defined interfaces and boundries. so in those cases and when and only if it makes sense for your project
+// that means to fetch the default driver you just have to tack on ['database']['default'] and you'll get 'mysql' in the browser
+/*Route::get('/', function() {
+
+	dd(app('Illuminate\Contracts\Config\Repository')['database']['default']);
+});*/
+
+// fourth way of doing this is ('config')
+// once again we get the same exact thing mysql in the browser
+/*Route::get('/', function() {
+	dd(app('config')['database']['default']);
+});*/
+
+// fifth way
+// imagine we already have an app instance and then we can use the ArrayAccess feature of php which laravel's container implements
+// if you look at Container.php you will see that ArrayAccess implements ArrayAccess
+/*Route::get('/', function() {
+	dd(app()['config']['database']['default']);
+});*/
 
 
+# Controller with Illuminate Contracts
+
+// create a controller and figure out just the basic. how do we request an interface and receive it automatically
+Route::get('test', 'WelcomeController@test');
 
 
