@@ -22,7 +22,6 @@
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li>{!! link_to_action('RecipesController@show', $latest->name, [$latest->id]) !!}</li>
         <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
