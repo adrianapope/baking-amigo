@@ -16,7 +16,7 @@
 		@yield('content')
 	</div>
 
-    <script>$('div.alert').not('.alert-important').delay(3000).slideUp(300);</script>--}}
+    <script>$('div.alert').not('.alert-important').delay(3000).slideUp(300);</script>
 
 	<script src="js/all.js"></script>
 
