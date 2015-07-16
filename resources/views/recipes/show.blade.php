@@ -3,7 +3,7 @@
 @section('content')
 
 <h1>{{ $recipe->name }}</h1>
-	
+
 	<article>
 		<h2>Description</h2>
 		{{ $recipe->description }}
