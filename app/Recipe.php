@@ -19,7 +19,6 @@ class Recipe extends Model {
 		'ready_time_type',
 		'servings',
 		'published_at',
-		'user_id' // temporary!!!
 	];
 
 	protected $dates = ['published_at'];
@@ -50,13 +49,6 @@ class Recipe extends Model {
 	{
  		$query->where('published_at', '<=', Carbon::now())->get();
 	}
-	// setNameAttribute
-	// convert underscore to camelcase
-	// correct form, use carbon format year month date
-	// and we will pass the string date as the second argument
-	// the time will be added as well if that makes sense for your project
-	// format is $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d', $date);
-	// if you want to set it in the future and publish at midnight do Carbon::parse($date);
 
 	/**
 	* Set the published_at attribute (this is a setter)
@@ -89,10 +81,6 @@ class Recipe extends Model {
         return $this->belongsToMany('App\Tag')->withTimestamps();
     }
 
-    // if we say tag_list or tagList it would trigger this method
-    // get an array of the ids of the tags associated with this recipe.
-    // we will switch the form to say tag_list instead of 'tags'
-    
     /**
     * Get the tags associated with the given recipe.
     * @return array
