@@ -56,7 +56,7 @@ class RecipesController extends Controller
 	public function create()
 	{
 		$tags = Tag::lists('name', 'id');  //we fetch our tags and use the method called lists. give me an array of all the values from a column (in this case we'll do 'name')
-        
+
         return view('recipes.create', compact('tags')); //we'll pass 'tags' through to the view
 	}
 
@@ -75,25 +75,6 @@ class RecipesController extends Controller
 	    session()->flash('flash_message', 'Your recipe has been created!');
 
         session()->flash('flash_message_important', true);
-
-
-        //#2 way of doing this
-        // use this with the package laracasts/flash
-        // and add the service provider and facade under config file->app
-        // also use this along with adding @include('flash::message') to the app.blade.php file
-/*        flash()->success('Your recipe has been successfully created!');*/
-        /*//same as using the facade approach below
-        \Flash::success();
-        \Flash::error();
-        \Flash::info();*/
-
-        // #3 way of doing this
-        // use this along with a modal in the app.blade.php file
-        // this is an overlay message. there is a message plus a heading.
-        // you have to fetch the modal
-        // on the app.blade.php file, we are using a little bootstrap. reference the script and activiate the plug in so to speak
-        /*   flash()->overlay('Thanks for contributing! Your recipe has been created.', 'Success!');
-        */
 
         return redirect('recipes');
     }
@@ -124,9 +105,6 @@ class RecipesController extends Controller
 	public function update(Recipe $recipe, RecipeRequest $request)
 	{
 		$recipe->update($request->all());
-
-		//$recipe->tags()->sync($request->input('tag_list'));  // we provide an array of tagIds and only those ids will be associated with the recipe in the pivot table. anything else in the table will be deleted. 
-															 // that means laravel will take care of the deleting and the adding automatically for you.
 
 		$this->syncTags($recipe, $request->input('tag_list'));
 
