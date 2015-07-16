@@ -11,23 +11,10 @@
 <body>
 	@include('layouts.nav')
 	<div class="container">
-		{{-- #1 way of doing this. --}}
         @include('partials.flash')
-
- 		{{--#2 notice it is :: and not just a single dot. use this with the laracasts/flash package
-        @include('flash::message')--}}
-
 
 		@yield('content')
 	</div>
-
-	{{--<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>--}}
-
-
-	{{--#3 way of doing this. doing an overlay.
-    <script>$('flash-overlay-modal').modal();</script>
 
     <script>$('div.alert').not('.alert-important').delay(3000).slideUp(300);</script>--}}
 
