@@ -1,1 +1,1 @@
-recipes home page
+Welcome to Baking Amigo!
