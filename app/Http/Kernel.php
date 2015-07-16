@@ -9,8 +9,6 @@ class Kernel extends HttpKernel {
 	 *
 	 * @var array
 	 */
-    // if we want the middleware to run for every single request...then it goes here.
-
 	protected $middleware = [
 		'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
 		'Illuminate\Cookie\Middleware\EncryptCookies',
@@ -25,7 +23,6 @@ class Kernel extends HttpKernel {
 	 *
 	 * @var array
 	 */
-    // special occurrences. we give it a key and then reference the path to the middleware, and we attach it to wherever you want to
 	protected $routeMiddleware = [
 		'auth' => 'App\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',

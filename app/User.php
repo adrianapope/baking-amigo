@@ -36,7 +36,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	*
 	* @return \Illuminate\Database\Eloquent\Relations\HasMany
 	*/
-	
+
 	/**
 	* A user can have many recipes.
 	*

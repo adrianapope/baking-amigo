@@ -4,7 +4,7 @@ use App\Recipe;
 
 class PageController extends Controller {
 
-	
+
 	/**
  	* Show the application welcome screen to the user.
 	 *

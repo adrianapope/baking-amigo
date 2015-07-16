@@ -24,8 +24,6 @@ class RouteServiceProvider extends ServiceProvider {
 	{
 		parent::boot($router);
 
-/*       $router->model('recipes', 'App\Recipe');
-*/
 		 $router->bind('recipes', function($id)
 		 {
 		 	return \App\Recipe::published()->findOrFail($id);
