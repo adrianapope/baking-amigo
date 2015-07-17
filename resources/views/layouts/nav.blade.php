@@ -12,9 +12,9 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="/about">About</a></li>
+        <li role="presentation"><a href="/about">About</a></li>
         <li role="presentation"><a href="/contact">Contact</a></li>
-        <li role="presentation"><a href="/recipes">Recipes</a></li>
+        <li role="presentation"><a href="#">Recipes</a></li>
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
