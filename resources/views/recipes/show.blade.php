@@ -1,4 +1,11 @@
- @extends('app')
+@extends('app')
+
+@section('customTitle', "$recipe->name - Baking Amigo")
+
+@section('customMeta')
+<meta property="og:title" content="{{ $recipe->name }}">
+<meta property="og:url" content="http://www.bakingamigo.com/recipes/{{ $recipe->id }}">
+@endsection
 
 @section('content')
 
