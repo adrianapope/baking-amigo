@@ -17,9 +17,7 @@ class PageController extends Controller {
 
 	public function about()
 	{
-		$recipes = Recipe::all();
-
-		return view('pages.about', compact('recipes'));
+		return view('pages.about');
 	}
 
 	public function terms()
