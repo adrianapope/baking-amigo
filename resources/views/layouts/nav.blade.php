@@ -12,10 +12,10 @@
 
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav nav-pills">
-          <li role="presentation" class="active"><a href="/about">About</a></li>
-          <li role="presentation"><a href="/contact">Contact</a></li>
-          <li role="presentation"><a href="/recipes">Recipes</a></li>
+        <ul class="nav navbar-nav">
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/recipes">Recipes</a></li>
           <li role="presentation"><a href="/auth/register" class="btn btn-primary" role="button">Sign Up!</a>
           <li role="presentation"><a href="/auth/login" class="btn btn-primary" role="button">Login</a>
       </ul>
