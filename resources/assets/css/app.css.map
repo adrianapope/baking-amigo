@@ -1,1 +1,0 @@
-{"version":3,"sources":["app.scss"],"names":[],"mappings":"AACA;EACC,mBAAkB;EAClB,eAAc,EAFT;;AAKiB;EACtB,kBAAiB,EADY","file":"app.css","sourcesContent":["\nbody {\n\tpadding-top: 40px;\n\tcolor: purple;\n}\n\nbody, label, .checkbox label {\n\tfont-weight: 300;\n}"],"sourceRoot":"/source/"}
