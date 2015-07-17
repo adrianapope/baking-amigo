@@ -55,9 +55,9 @@ class RecipesController extends Controller
 	*/
 	public function create()
 	{
-		$tags = Tag::lists('name', 'id');  //we fetch our tags and use the method called lists. give me an array of all the values from a column (in this case we'll do 'name')
+		$tags = Tag::lists('name', 'id');
 
-        return view('recipes.create', compact('tags')); //we'll pass 'tags' through to the view
+        return view('recipes.create', compact('tags'));
 	}
 
 
