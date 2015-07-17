@@ -16,17 +16,26 @@
           <li><a href="/contact">Contact</a></li>
           <li><a href="/recipes">Recipes</a></li>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-      </form>
+
       <ul class="nav navbar-nav navbar-right">
-        @if (Auth::user)
-          <li role="presentation"><a href="/auth/logout" class="btn btn-default" role="button">Logout</a>
+        @if (Auth::user())
+          <li role="presentation">
+            <a href="/auth/logout">
+              <span class="btn btn-primary" role="button">Logout</span>
+            </a>
+          </li>
         @else
-        <li role="presentation"><a href="/auth/register" class="btn btn-default" role="button">Sign Up!</a>
-        <li role="presentation"><a href="/auth/login" class="btn btn-default" role="button">Login</a>
+          <li role="presentation">
+            <a href="/auth/register">
+              <span class="btn btn-primary" role="button">Sign Up!</span>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="/auth/login">
+              <span class="btn btn-info" role="button">Login</span>
+            </a>
+          </li>
+        @endif
       </ul>
     </div>
 </nav>
