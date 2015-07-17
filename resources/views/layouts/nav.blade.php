@@ -24,7 +24,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li role="presentation"><a href="/auth/register" class="btn btn-default" role="button">Sign Up!</a>
         <li role="presentation"><a href="/auth/login" class="btn btn-default" role="button">Login</a>
+        <li role="presentation"><a href="/auth/logout" class="btn btn-default" role="button">Logout</a>
       </ul>
     </div>
-  </div>
 </nav>
