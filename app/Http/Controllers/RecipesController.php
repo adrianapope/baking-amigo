@@ -8,6 +8,7 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
+
 class RecipesController extends Controller
 
 {
@@ -70,6 +71,7 @@ class RecipesController extends Controller
 	*/
 	public function store(RecipeRequest $request)
 	{
+
 		$this->createRecipe($request);
 
 	    session()->flash('flash_message', 'Your recipe has been created!');
@@ -129,9 +131,9 @@ class RecipesController extends Controller
 	*/
 	private function createRecipe(RecipeRequest $request)
 	{
-		$recipe = Auth::user()->recipe()->create($request->all());
+		$recipe = Auth::user()->recipes()->create($request->all());
 
-		$this->syncTags($recipe, $request->input('tag_list'));
+		$this->syncTags($recipe, (array) $request->input('tag_list'));
 
 		return $recipe;
 	}
