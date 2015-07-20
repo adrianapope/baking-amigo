@@ -2,8 +2,6 @@
 
 @section('content')
 
-	<h1>Welcome!</h1>
-	<p>
-	Share your recipes here with a community of fellow bakers.
-	</p>
+@include('layouts.landing')
+
 @stop
