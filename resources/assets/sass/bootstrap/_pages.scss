@@ -1,0 +1,21 @@
+.homepage-points-wrapper {
+	text-align: center;
+}
+
+.homepage-recipes-wrapper-first {
+	margin-top: 50px;
+}
+
+.homepage-recipes-wrapper-second {
+	margin-top: 50px;
+}
+
+.homepage-recipes-wrapper-third {
+	margin-top: 50px;
+}
+
+img:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transition-delay: .1s;
+}
