@@ -6,5 +6,6 @@
 	<p>You can reach out to us at bakingamigo&#64;gmail.com</p>
 @stop
 
+
 @section('footer')
 @stop
