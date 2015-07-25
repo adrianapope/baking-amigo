@@ -12,5 +12,4 @@
 		<img src="img/small-cupcakes.jpg" alt="Cupcakes" class="img-rounded img-responsive width="200" height="200"">
 	</div>
 </div>
-
 @stop

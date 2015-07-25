@@ -1,21 +1,55 @@
+
+
+/* Home Styles */
+
+.jumbotron h1 {
+	color: #FF8F71;
+}
+
+.homepage-heading {
+	color: #468847;
+}
+
 .homepage-points-wrapper {
 	text-align: center;
 }
 
-.homepage-recipes-wrapper-first {
+.homepage-recipes-wrapper {
 	margin-top: 50px;
 }
 
-.homepage-recipes-wrapper-second {
-	margin-top: 50px;
-}
-
-.homepage-recipes-wrapper-third {
-	margin-top: 50px;
-}
-
-img:hover {
+.homepage-recipes-wrapper img:hover {
     opacity: 0.4;
     filter: alpha(opacity=40);
     -webkit-transition-delay: .1s;
 }
+
+/* About Page */
+
+.about-wrapper {
+	width: 600px;
+	margin: 0;
+}
+
+.about-wrapper h1 {
+	font-style: bold;
+	font-size: 60px;
+}
+
+.about-wrapper p {
+	font-size: 18px;
+}
+
+.about-wrapper blockquote {
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 40px;
+	letter-spacing: 2px;
+}
+
+
+/* Contact Page */
+
+.contact-wrapper { }
+
+
