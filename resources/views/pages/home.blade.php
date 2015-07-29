@@ -5,9 +5,9 @@
 
       <div class="text-center">
         <div class="jumbotron">
-          <h1>Find & Swap Recipes.</h1>
-          <p class="text-info">!Hola! Welcome to our little community of fellow baking enthusiasts where everyone is an amigo. Whether you are just a newb trying out your mitts, or an experienced macaroon expert, we'd love to share your recipes with the rest of the world. Híjole, what are you waiting for?</p>
-          <p><a class="btn btn-lg btn-success" href="/recipes/create" role="button">Submit a Recipe Today</a>
+          <h1>Find & Swap <span class="weak">Allergen-free</span> Recipes.</h1>
+          <p class="text-info">!Hola! Welcome to our little community of allergen-free baking enthusiasts where everyone is an amigo. Whether you are just a newb trying out your mitts or an experienced ingredient-substituting expert, we'd love to share your recipe with the rest of the world.</p>
+          <p><a class="btn btn-default btn-lg" href="/recipes/create" role="button">Submit a Recipe Today</a>
           </p>
       	</div>
       </div>
