@@ -45,6 +45,6 @@ Route::get('foo', ['middleware' => 'manager', function()
 }]);
 
 # Profile
-Route::get('/{profile}', 'ProfilesController@show');
+Route::get('/users/{profile}', 'ProfilesController@show');
 
 
