@@ -5999,7 +5999,7 @@ button.close {
   font-weight: lighter; }
 
 .jumbotron .btn-default {
-  background-color: #FF8A9C;
+  background-color: #2BB246;
   color: #ffffff; }
 
 .text-center {
@@ -6054,15 +6054,14 @@ button.close {
 
 /* Navigation Bar */
 .navbar-default {
-  background-color: #000000;
-  font-color: white;
   font-size: 18px;
-  line-height: 1em; }
+  line-height: 1em;
+  color: black; }
 
 .navbar-header .navbar-brand {
   font-family: 'Paytone One', sans-serif;
   font-size: 30px;
-  color: white; }
+  color: black; }
 
 .navbar-right .btn-default-one {
   background-color: #2BB246;
