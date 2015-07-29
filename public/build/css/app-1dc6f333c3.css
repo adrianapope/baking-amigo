@@ -5993,10 +5993,20 @@ button.close {
 
 /* Home Styles */
 .jumbotron h1 {
-  color: #FF8F71; }
+  color: #FF8A9C; }
+
+.jumbotron .weak {
+  font-weight: lighter; }
+
+.jumbotron .btn-default {
+  background-color: #FF8A9C;
+  color: #ffffff; }
+
+.text-center {
+  background-color: #000000; }
 
 .homepage-heading {
-  color: #468847; }
+  color: #FF8A9C; }
 
 .homepage-points-wrapper {
   text-align: center; }
@@ -6016,7 +6026,8 @@ button.close {
 
 .about-wrapper h1 {
   font-style: bold;
-  font-size: 60px; }
+  font-size: 60px;
+  letter-spacing: -1px; }
 
 .about-wrapper p {
   font-size: 18px; }
@@ -6028,6 +6039,47 @@ button.close {
   letter-spacing: 2px; }
 
 /* Contact Page */
+.contact-wrapper body {
+  width: 500px;
+  margin: 0;
+  float: left; }
+
+.contact-wrapper h1 {
+  font-style: bold;
+  font-size: 60px;
+  letter-spacing: -1px; }
+
+.contact-wrapper p {
+  font-size: 18px; }
+
+/* Navigation Bar */
+.navbar-default {
+  background-color: #000000;
+  font-color: white;
+  font-size: 18px;
+  line-height: 1em; }
+
+.navbar-header .navbar-brand {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 30px;
+  color: white; }
+
+.navbar-right .btn-default-one {
+  background-color: #2BB246;
+  color: #ffffff; }
+
+.navbar-right .btn-default-two {
+  background-color: #28ABE3;
+  color: #ffffff; }
+
+.navbar-right .btn-default-three {
+  background-color: #2BB246;
+  color: #ffffff; }
+
+/* Index Page -Shows a preview of Recipes */
+.index-wrapper .btn-default {
+  background-color: #2BB246;
+  color: #ffffff; }
 
 .select2-container {
   box-sizing: border-box;
