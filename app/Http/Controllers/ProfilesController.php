@@ -11,21 +11,20 @@ class ProfilesController extends Controller {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  $name
+	 * @param  $id
 	 * @return Response
 	 */
-	public function show($name)
+	public function show($id)
 	{
 		try
 		{
-			$user = User::whereName($name)->firstOrFail();
-			dd($user->toArray());
+			$user = User::whereId($id)->firstOrFail();
 		}
 		catch(ModelNotFoundException $e)
 		{
 			return redirect('/');
 		}
-		return View::make('profiles.show');
+		return view('profiles.show', compact('user'));
 	}
 
 }
