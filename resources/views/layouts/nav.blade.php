@@ -21,18 +21,18 @@
         @if (Auth::user())
           <li role="presentation">
             <a href="/auth/logout">
-              <span class="btn btn-primary" role="button">Logout</span>
+              <span class="btn btn-default-one" role="button">Logout</span>
             </a>
           </li>
         @else
           <li role="presentation">
             <a href="/auth/register">
-              <span class="btn btn-primary" role="button">Sign Up!</span>
+              <span class="btn btn-default-two" role="button">Sign Up!</span>
             </a>
           </li>
           <li role="presentation">
             <a href="/auth/login">
-              <span class="btn btn-info" role="button">Login</span>
+              <span class="btn btn-default-three" role="button">Login</span>
             </a>
           </li>
         @endif
