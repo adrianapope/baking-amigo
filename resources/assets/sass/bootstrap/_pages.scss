@@ -1,4 +1,7 @@
-
+/* General */
+.page-navigation-wrapper {
+	padding-top: 50px;
+}
 
 /* Home Styles */
 
@@ -8,11 +11,6 @@
 
 .jumbotron .weak {
 	font-weight: lighter;
-}
-
-.jumbotron .btn-default {
-	background-color: #2BB246;;
-	color: #ffffff;
 }
 
 .text-center {
@@ -96,27 +94,18 @@
 	color: black;
 }
 
-.navbar-right .btn-default-one {
-	background-color: #2BB246;
-	color: #ffffff;
+
+/* Index Page - Lists out recipes as a preview */
+
+/* Show Page - Shows the recipe fully */
+
+.show-index h1 {
+	color: #ff6980;
 }
 
-.navbar-right .btn-default-two {
-	background-color: #28ABE3;
-	color: #ffffff;
+.show-index h2 {
+	font-size: 18px;
+	font-style: bold;
 }
-
-.navbar-right .btn-default-three {
-	background-color: #2BB246;
-	color: #ffffff;
-}
-
-/* Index Page -Shows a preview of Recipes */
-
-.index-wrapper .btn-default {
-	background-color: #2BB246;
-	color: #ffffff;
-}
-
 
 
