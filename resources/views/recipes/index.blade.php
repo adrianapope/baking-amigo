@@ -1,24 +1,22 @@
-
-
 @extends('app')
 
 @section('content')
-
-<div class="index-wrapper">
 	<div class="container">
-		<h1>Recipes</h1>
+		<div class="recipes-index">
+			<h1>Recipes</h1>
 
-		@foreach ($recipes as $recipe)
-			<article>
-				<h2>
-					<a href="/recipes/{{ $recipe->id }}">{{ $recipe->name }}</a>
-				</h2>
+			@foreach ($recipes as $recipe)
+				<div class="recipes-index-single">
+					<h2>
+						<a href="/recipes/{{ $recipe->id }}">{{ ucwords($recipe->name) }}</a>
+					</h2>
 
-				<div class="body">{{ $recipe->description }}</div>
-			</article>
-		@endforeach
-
-		<a href="/recipes/create"><span class="btn btn-default btn-lg">Create a Recipe</span></a>
+					<div class="body">{{ $recipe->description }}</div>
+				</div>
+			@endforeach
+		</div>
+		<div class="page-navigation-wrapper">
+			<a href="/recipes/create"><span class="btn btn-success btn-lg">Create a Recipe</span></a>
+		</div>
 	</div>
-</div>
 @stop
