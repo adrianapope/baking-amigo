@@ -18,7 +18,7 @@ class ProfilesController extends Controller {
 	{
 		try
 		{
-			$user = User::whereId($id)->firstOrFail();
+			$user = User::with('profile')->whereId($id)->firstOrFail();
 		}
 		catch(ModelNotFoundException $e)
 		{
@@ -28,3 +28,5 @@ class ProfilesController extends Controller {
 	}
 
 }
+
+
