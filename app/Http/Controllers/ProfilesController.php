@@ -1,10 +1,12 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\ProfileFormRequest;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Auth;
 
 class ProfilesController extends Controller {
 
@@ -22,23 +24,51 @@ class ProfilesController extends Controller {
 		}
 		catch(ModelNotFoundException $e)
 		{
-			return redirect('/');
+			return abort(404);
 		}
 		return view('profiles.show', compact('user'));
 	}
 
 	public function edit($id)
 	{
-		$user = User::whereId($id)->firstOrFail();
+		try
+		{
+			$user = User::whereId($id)->firstOrFail();
+		} catch(ModelNotFoundException $e) {
+			return abort(404);
+		}
 
-		return view('profiles.edit', compact('user'));
+		if( Auth::user()->id == $user->id ) {
+			return view('profiles.edit', compact('user'));
+		}
+
+		return abort(404);
+
 	}
 
-	public function update($id)
+	public function update($id, ProfileFormRequest $request)
 	{
-		$user = User::whereId($id)->firstOrFail();
 
-		$input = Input::only('location', 'bio', 'twitter_username', 'instagram_username');
+		try
+		{
+			$user = User::whereId($id)->firstOrFail();
+		} catch(ModelNotFoundException $e) {
+			return abort(404);
+		}
+
+		if( Auth::user()->id == $user->id ) {
+
+			$profile = $user->profile()->first();
+			$profile->location = $request['location'];
+			$profile->bio = $request['bio'];
+			$profile->twitter_username = $request['twitter_username'];
+			$profile->instagram_username = $request['instagram_username'];
+			$profile->save();
+			return redirect("/users/$user->id/edit");
+		}
+
+		return abort(404);
+
 	}
 }
 
