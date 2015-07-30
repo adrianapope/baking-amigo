@@ -1,6 +1,9 @@
-<?php
+<?php namespace App;
 
-class Profile extends Eloquent {
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
+
+class Profile extends Model {
 
 	public function user()
 	{
