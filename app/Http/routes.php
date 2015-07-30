@@ -47,7 +47,7 @@ Route::get('foo', ['middleware' => 'manager', function()
 # Profile
 Route::get('/users/{profile}', 'ProfilesController@show');
 Route::get('/users/{profile}/edit', 'ProfilesController@edit');
-Route::get('/users/{profile}/update', 'ProfilesController@update');
+Route::post('/users/{profile}/update', 'ProfilesController@update');
 
 
 
