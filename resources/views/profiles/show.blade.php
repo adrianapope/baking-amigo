@@ -16,7 +16,7 @@
 
 			<div class="page-navigation-wrapper">
 				@if( Auth::user() && Auth::user()->id == $user->id)
-					<a href="#"><span class="btn btn-success">Edit Your Profile</span></a>
+					<a href="/users/{{ $user->id }}/edit"><span class="btn btn-success">Edit Your Profile</span></a>
 				@endif
 			</div>
 		</div>
