@@ -27,6 +27,19 @@ class ProfilesController extends Controller {
 		return view('profiles.show', compact('user'));
 	}
 
+	public function edit($id)
+	{
+		$user = User::whereId($id)->firstOrFail();
+
+		return view('profiles.edit', compact('user'));
+	}
+
+	public function update($id)
+	{
+		$user = User::whereId($id)->firstOrFail();
+
+		$input = Input::only('location', 'bio', 'twitter_username', 'instagram_username');
+	}
 }
 
 
