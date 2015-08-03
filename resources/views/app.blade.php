@@ -17,10 +17,12 @@
 		@yield('content')
 	</div>
 
-    <script>$('div.alert').not('.alert-important').delay(3000).slideUp(300);</script>
+	<script src="//code.jquery.com/jquery.js"></script>
+    <script>
+    	$('div.alert').not('.alert-important').delay(3000).slideUp(300);
+    </script>
 
-	<script src="js/all.js"></script>
-
-	@yield('footer')
+	<script src="{{ elixir('js/app.js') }}"></script>
+	@include('layouts.footer')
 </body>
 </html>

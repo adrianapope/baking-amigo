@@ -74,9 +74,7 @@ class RecipesController extends Controller
 
 		$this->createRecipe($request);
 
-	    session()->flash('flash_message', 'Your recipe has been created!');
-
-        session()->flash('flash_message_important', true);
+	    session()->flash('flash_message', 'Sweet! Your recipe has been successfully created.');
 
         return redirect('recipes');
     }
@@ -94,6 +92,7 @@ class RecipesController extends Controller
 		$tags = Tag::lists('name', 'id');
 
 		return view('recipes.edit', compact('recipe', 'tags'));
+
 	}
 
 
@@ -109,6 +108,8 @@ class RecipesController extends Controller
 		$recipe->update($request->all());
 
 		$this->syncTags($recipe, $request->input('tag_list'));
+
+		session()->flash('flash_message', 'Good job! Your recipe has been successfully edited.');
 
 		return redirect('recipes');
 	}
