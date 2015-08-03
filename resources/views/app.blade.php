@@ -6,6 +6,7 @@
  	<link rel="stylesheet" href="{{ elixir('css/app.css') }}">
  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<meta name="description" content="Recipes for bakers of all skill levels! Join today for free.">
  	@yield('customMeta')
 

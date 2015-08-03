@@ -6093,7 +6093,8 @@ footer hr {
 .social-links li {
   display: inline;
   margin-left: 5px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  font-size: 20px; }
 
 .select2-container {
   box-sizing: border-box;
