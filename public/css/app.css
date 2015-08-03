@@ -6014,8 +6014,7 @@ button.close {
 .homepage-recipes-wrapper img:hover {
   opacity: 0.4;
   filter: alpha(opacity=40);
-  -webkit-transition-delay: .1s;
-  padding-bottom: 60px; }
+  -webkit-transition-delay: .1s; }
 
 /* About Page */
 .about-wrapper {
@@ -6075,7 +6074,8 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #222222;
-  color: white; }
+  color: white;
+  margin-top: 60px; }
 
 footer ul {
   padding: 0; }
