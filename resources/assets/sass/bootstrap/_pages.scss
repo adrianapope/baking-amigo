@@ -29,6 +29,7 @@
     opacity: 0.4;
     filter: alpha(opacity=40);
     -webkit-transition-delay: .1s;
+    padding-bottom: 60px;
 }
 
 /* About Page */
@@ -104,4 +105,35 @@
 	font-style: bold;
 }
 
+/* Footer */
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #222222;
+    color: white;
+}
+
+footer ul {
+	padding: 0;
+
+}
+
+footer li {
+	list-style: none;
+	line-height: 2.2em;
+}
+
+footer hr {
+	border-top: 1px solid #373737;
+}
+.social-links-wrapper {
+	text-align: center;
+}
+
+.social-links li {
+	display: inline;
+	margin-left: 5px;
+	margin-right: 5px;
+}
 
