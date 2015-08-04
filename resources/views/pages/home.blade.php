@@ -4,11 +4,21 @@
 	<!-- Jumbotron -->
 	<div class="text-center">
 		<div class="jumbotron">
-			<h1>Find &amp; Swap <span class="weak">Allergen-free</span> Recipes.</h1>
-			<p class="homepage-jumbotron-paragraph">!Hola! Welcome to our little community of allergen-free baking enthusiasts where everyone is an amigo. Whether you are just a newb trying out your mitts or an experienced ingredient-substituting expert, we'd love to share your recipe with the rest of the world.</p>
-			<p>
-				<a class="btn btn-success btn-lg" href="/recipes/create" role="button">Submit a Recipe Today</a>
-			</p>
+			<h1>Allergen-free Recipes</h1>
+			<p class="homepage-jumbotron-paragraph"> Best allergen-free baking recipes in one place.</p>
+
+ 			<div class="search-bar-wrapper">
+	 			<div class="row">
+					<div class="col-lg-8 col-lg-offset-2">
+					    <div class="input-group">
+					      <input type="text" class="form-control input-lg" placeholder="What would you like to bake?">
+					      <span class="input-group-btn">
+					        <button class="btn btn-primary btn-lg" type="button">Search</button>
+					      </span>
+					    </div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
