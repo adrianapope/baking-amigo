@@ -6016,6 +6016,12 @@ button.close {
   filter: alpha(opacity=40);
   -webkit-transition-delay: .1s; }
 
+.homepage-points-wrapper .row img:hover {
+  cursor: pointer; }
+
+.homepage-points-wrapper .row h2:hover {
+  cursor: pointer; }
+
 /* About Page */
 .about-wrapper {
   width: 600px;
