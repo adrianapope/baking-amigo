@@ -20,18 +20,21 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-					<h2 class="homepage-heading">Become an Amigo!</h2>
-					<p class="text-muted">Want to bake something amazing that impresses heaps of folks? Join today for free.</p>
+					<h2 class="homepage-heading">Become an Amigo</h2>
+					<p class="text-muted">Want to bake something amazing that <br>
+					impresses heaps of folks? Join today. </p>
 				</div><!-- /col-lg-4 -->
 				<div class="col-lg-4">
 					<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-					<h2 class="homepage-heading">Ándale, Level Up</h2>
-					<p class="text-muted">Learn tips and tricks from fellow bakers. Your next challenge awaits you.  </p>
+					<h2 class="homepage-heading">Discover</h2>
+					<p class="text-muted">Learn tips and tricks from fellow <br>
+					bakers. Your next challenge awaits you. </p>
 				</div><!-- /col-lg-4 -->
 				<div class="col-lg-4">
 					<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-					<h2 class="homepage-heading">¡Órale! Sharing is Caring</h2>
-					<p class="text-muted">Write a recipe, then use a recipe. It's the recipe cycle that keeps on giving.</p>
+					<h2 class="homepage-heading">Share</h2>
+					<p class="text-muted">Write a recipe, then use a recipe. <br>
+					It's the cycle that keeps on giving. </p>
 				</div><!-- /col-lg-4 -->
 			</div><!-- /.row -->
 		</div>
