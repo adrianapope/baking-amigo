@@ -10,19 +10,17 @@
       <a class="navbar-brand" href="/">Baking Amigo</a>
     </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/recipes">Recipes</a></li>
-      </ul>
-
       <ul class="nav navbar-nav navbar-right">
         @if (Auth::user())
           <li><a href="/users/{{ Auth::user()->id }}">{{ Auth::user()->name }}</a></li>
           <li role="presentation">
             <a href="/auth/logout">
               <span class="btn btn-info" role="button">Logout</span>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="/recipes/create">
+              <span class="btn btn-" role="button">Submit Recipe</span>
             </a>
           </li>
         @else
@@ -36,7 +34,13 @@
               <span class="btn btn-success" role="button">Login</span>
             </a>
           </li>
+          <li role="presentation">
+            <a href="/recipes/create">
+              <span class="btn btn-default" role="button">Submit Recipe</span>
+            </a>
+          </li>
         @endif
       </ul>
     </div>
 </nav>
+
