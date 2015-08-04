@@ -1,7 +1,11 @@
 <?php
 
 # Home
+/*Route::get('/test', function() {
+	$img = Image::make('img/slice-of-cake.jpg')->crop(200, 200)->save('img/test123.jpg');
 
+	echo "<img src='img/test123.jpg'>";
+});*/
 Route::get('/', 'PageController@index');
 Route::get('home', 'HomeController@index');
 
