@@ -6011,7 +6011,7 @@ button.close {
 .homepage-recipes-wrapper img:hover {
   opacity: 0.4;
   filter: alpha(opacity=40);
-  -webkit-transition-delay: .1s; }
+  -webkit-transition-delay: .01s; }
 
 .homepage-points-wrapper .row img:hover {
   cursor: pointer; }
