@@ -200,8 +200,8 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
-        'Flash'     => 'Laracasts/Flash/Flash',
-        'Image'     => 'Intervention\Image\ImageServiceProvider'
+        'Flash'     => 'Laracasts\Flash\Flash',
+        'Image'     => 'Intervention\Image\Facades\Image'
 
 	],
 
