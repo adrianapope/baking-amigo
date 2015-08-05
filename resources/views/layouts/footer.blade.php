@@ -3,7 +3,7 @@
 		<div class="main-footer-wrapper">
 			<div class="row">
 				{{-- Nested divs begin here--}}
-				<div class="col-md-2 col-md-offset-4">
+				<div class="col-sm-2 col-sm-offset-4">
 					<h4>Company</h4>
 					<ul class="footer-links">
 						<li><a href="about">About</a></li>
@@ -12,7 +12,7 @@
 						<li><a href="terms">Terms of Service</a></li>
 					</ul>
 				</div>
-				<div class="col-md-2">
+				<div class="col-sm-2">
 					<h4>Discover</h4>
 					<ul class="footer-links">
 						<li><a href="recipes">Recipes</a></li>
@@ -21,7 +21,7 @@
 
 					</ul>
 				</div>
-				<div class="col-md-2">
+				<div class="col-sm-2">
 					<h4>Share</h4>
 						<ul class="footer-links">
 							<li><a href="/recipes/create">Your Recipes</a></li>
@@ -32,7 +32,7 @@
 			<hr>
 
 			<div class="social-links-wrapper row">
-				<div class="col-md-12">
+				<div class="col-sm-12">
 					<h5>Join us on</h5>
 						<ul class="social-links">
 							<li><a href="https://www.facebook.com/pages/Baking-Amigo/913875178686208"><i class="fa fa-facebook-square"></i></a></li>
