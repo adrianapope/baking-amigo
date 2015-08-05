@@ -6041,8 +6041,7 @@ button.close {
 /* Contact Page */
 .contact-wrapper body {
   width: 500px;
-  margin: 0;
-  float: left; }
+  margin: 0; }
 
 .contact-wrapper h1 {
   font-style: bold;
@@ -6065,12 +6064,8 @@ button.close {
 
 /* Index Page - Lists out recipes as a preview */
 /* Show Page - Shows the recipe fully */
-.show-index h1 {
+.show-index-header h1 {
   color: #ff6980; }
-
-.show-index h2 {
-  font-size: 18px;
-  font-style: bold; }
 
 /* Footer */
 footer {

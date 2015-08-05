@@ -100,14 +100,10 @@
 
 /* Show Page - Shows the recipe fully */
 
-.show-index h1 {
+.show-index-header h1 {
 	color: #ff6980;
 }
 
-.show-index h2 {
-	font-size: 18px;
-	font-style: bold;
-}
 
 /* Footer */
 
@@ -132,6 +128,7 @@ footer li {
 footer hr {
 	border-top: 1px solid #373737;
 }
+
 .social-links-wrapper {
 	text-align: center;
 }
@@ -143,5 +140,5 @@ footer hr {
 	font-size: 20px;
 }
 
-/* 404 Page */
+
 
