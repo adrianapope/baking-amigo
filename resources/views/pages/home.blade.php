@@ -55,18 +55,37 @@
 
 	<div class="homepage-recipes-wrapper">
 		<div class="container">
+	      	<h2>Explore Recipes by Category</h2>
+				<div class="row">
+	        		<div class="col-sm-3">
+						<img src="img/tiny-cookie.jpg" alt="Cookie" class="img-rounded img-responsive">
+					</div>
+					<div class="col-sm-3">
+						<img src="img/tiny-bread.jpg" alt="Bread" class="img-rounded img-responsive">
+					</div>
+			  		<div class="col-sm-3">
+						<img src="img/tiny-cupcakes.jpg" alt="Cupcakes" class="img-rounded img-responsive">
+					</div>
+				    <div class="col-sm-3">
+						<img src="img/tiny-handpies.jpg" alt="Handpies" class="img-rounded img-responsive">
+					</div>
+					</div>
+		</div>
+	</div>
+		<div class="homepage-recipes-wrapper">
+		<div class="container">
 	      <div class="row">
 	        <div class="col-sm-3">
-				<img src="img/tiny-cookie.jpg" alt="Cookie" class="img-rounded img-responsive">
+				<img src="img/tiny-donuts.jpg" alt="Donuts" class="img-rounded img-responsive">
 			</div>
 			  <div class="col-sm-3">
-				<img src="img/tiny-bread.jpg" alt="Bread" class="img-rounded img-responsive">
+				<img src="img/tiny-cake.jpg" alt="Cake" class="img-rounded img-responsive">
 			</div>
 			  <div class="col-sm-3">
-				<img src="img/tiny-cupcakes.jpg" alt="Cupcakes" class="img-rounded img-responsive">
+				<img src="img/tiny-brownie.jpg" alt="Brownie" class="img-rounded img-responsive">
 			</div>
 			  <div class="col-sm-3">
-				<img src="img/tiny-handpies.jpg" alt="Handpies" class="img-rounded img-responsive">
+				<img src="img/tiny-raw.jpg" alt="Raw" class="img-rounded img-responsive">
 				</div>
 			</div>
 		</div>
@@ -74,36 +93,18 @@
 		<div class="homepage-recipes-wrapper">
 		<div class="container">
 	      <div class="row">
-	        <div class="col-sm-3">
-				<img src="http://dummyimage.com/250x250/b3b1b3/dcdef5.jpg" alt="Generic Placeholder image" class="img-rounded img-responsive">
+			  <div class="col-sm-3">
+				<img src="img/tiny-muffin.jpg" alt="Muffin" class="img-rounded img-responsive">
 			</div>
 			  <div class="col-sm-3">
-				<img src="http://dummyimage.com/250x250/b3b1b3/dcdef5.jpg" alt="Generic Placeholder image" class="img-rounded img-responsive">
+				<img src="img/tiny-bars.jpg" alt="Bars" class="img-rounded img-responsive">
 			</div>
 			  <div class="col-sm-3">
-				<img src="http://dummyimage.com/250x250/b3b1b3/dcdef5.jpg" alt="Generic Placeholder image" class="img-rounded img-responsive">
-			</div>
-			  <div class="col-sm-3">
-				<img src="http://dummyimage.com/250x250/b3b1b3/dcdef5.jpg" alt="Generic Placeholder image" class="img-rounded img-responsive">
+				<img src="img/tiny-tea.jpg" alt="Tea" class="img-rounded img-responsive">
 				</div>
+				<div class="col-sm-3">
+				<img src="img/tiny-macaroons.jpg" alt="Macaroons" class="img-rounded img-responsive">
 			</div>
-		</div>
-	</div>
-		<div class="homepage-recipes-wrapper">
-		<div class="container">
-	      <div class="row">
-	        <div class="col-sm-3">
-				<img src="http://dummyimage.com/250x250/b3b1b3/dcdef5.jpg" alt="Generic Placeholder image" class="img-rounded img-responsive">
-			</div>
-			  <div class="col-sm-3">
-				<img src="http://dummyimage.com/250x250/b3b1b3/dcdef5.jpg" alt="Generic Placeholder image" class="img-rounded img-responsive">
-			</div>
-			  <div class="col-sm-3">
-				<img src="http://dummyimage.com/250x250/b3b1b3/dcdef5.jpg" alt="Generic Placeholder image" class="img-rounded img-responsive">
-			</div>
-			  <div class="col-sm-3">
-				<img src="http://dummyimage.com/250x250/b3b1b3/dcdef5.jpg" alt="Generic Placeholder image" class="img-rounded img-responsive">
-				</div>
 			</div>
 		</div>
 	</div>
