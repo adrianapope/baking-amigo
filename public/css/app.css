@@ -6064,8 +6064,14 @@ button.close {
 
 /* Index Page - Lists out recipes as a preview */
 /* Show Page - Shows the recipe fully */
-.show-index-header h1 {
+.show-index-wrapper h1 {
   color: #ff6980; }
+
+.show-index-key-info ul li {
+  display: inline; }
+
+.show-index-tags ul li {
+  text-decoration: none; }
 
 /* Footer */
 footer {
