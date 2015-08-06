@@ -6,10 +6,10 @@
 				<div class="col-sm-2 col-sm-offset-4">
 					<h4>Company</h4>
 					<ul class="footer-links">
-						<li><a href="about">About</a></li>
-						<li><a href="contact">Contact</a></li>
-						<li><a href="privacy">Privacy Policy</a></li>
-						<li><a href="terms">Terms of Service</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/contact">Contact</a></li>
+						<li><a href="/privacy">Privacy Policy</a></li>
+						<li><a href="/terms">Terms of Service</a></li>
 					</ul>
 				</div>
 				<div class="col-sm-2">
