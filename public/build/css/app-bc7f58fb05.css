@@ -6073,8 +6073,9 @@ button.close {
 
 .show-recipe-single h1 {
   color: #ff6980;
-  font-family: 'Courgette', cursive;
-  font-style: bold; }
+  font-family: 'Berkshire Swash', cursive;
+  font-style: bold;
+  font-size: 56; }
 
 .show-recipe-rating {
   font-size: 25px; }
