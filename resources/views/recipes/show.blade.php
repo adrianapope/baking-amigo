@@ -27,9 +27,10 @@
 
 				<div class="row">
 					<div class="col-sm-9">
-						<h5>By UsernameGoesHere</h5>
+						<h5>By <a href="#">UsernameGoesHere</a></h5>
 					</div>
 					<div class="col-sm-3">
+						<h5><a href="#">READ REVIEWS</a></h5>
 							<span class="show-recipe-rating">
           					<span class="star">★</span>
           					<span class="star">★</span>
