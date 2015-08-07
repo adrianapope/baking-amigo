@@ -6064,14 +6064,41 @@ button.close {
 
 /* Index Page - Lists out recipes as a preview */
 /* Show Page - Shows the recipe fully */
-.show-index-wrapper h1 {
-  color: #ff6980; }
+.show-recipe-header-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+  background: url("/img/pink_rice.png"); }
 
-.show-index-key-info ul li {
-  display: inline; }
+.show-recipe-single h1 {
+  color: #ff6980;
+  font-family: 'Courgette', cursive;
+  font-style: bold; }
 
-.show-index-tags ul li {
-  text-decoration: none; }
+.show-recipe-rating {
+  font-size: 25px; }
+
+.show-recipe-social-links li {
+  display: inline;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 40px; }
+
+.media-left ul {
+  padding-left: 0; }
+
+.fa-quote-left {
+  font-size: 14px; }
+
+.fa-quote-right {
+  font-size: 14px; }
+
+.fa-heart-o a:hover:before {
+  content: "f08a"; }
+
+.fa-heart-o a:hover:after {
+  content: "f004"; }
 
 /* Footer */
 footer {

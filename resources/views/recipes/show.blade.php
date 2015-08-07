@@ -9,146 +9,69 @@
 
 @section('content')
 
+<div class="section show-recipe-header-section">
+	<div class="container">
 
-<div class="container">
-	<div class="row">
-		<div class="col-sm-12 show-index-wrapper">
-			<h1>{{ $recipe->name }}</h1>
-			<div class="row">
-				<div class="col-sm-6 col-xs-12">
-					<img src="/img/chocolate-chip-cookies.jpg" class="img-responsive img-rounded">
+		<div class="row">
+			<div class="col-sm-4 ">
+				<img src="/img/test.jpg" class="img-responsive img-rounded">
+			</div> {{-- big column 3 in section ends here--}}
+			<div class="col-sm-8">
+				<div class="row show-recipe-single">
+					<div class="col-sm-12">
+						<h1>{{ $recipe->name }}</h1>
+					</div>
 				</div>
+
+				<hr>
+
 				<div class="row">
-					<div class="col-sm-4 col-xs-12 bg-success">
-						<small>Published On:
-							{{ $recipe->published_at }}
-						</small>
-						<hr>
-						<blockquote>
-						<p>{{ $recipe->description }}<p>
-						</blockquote>
-						<div class="col-sm-2 col-xs-12">
-						</div>
+					<div class="col-sm-9">
+						<h5>By UsernameGoesHere</h5>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+					<div class="col-sm-3">
+							<span class="show-recipe-rating">
+          					<span class="star">★</span>
+          					<span class="star">★</span>
+          					<span class="star">★</span>
+          					<span class="star">★</span>
+          					<span class="star">★</span>
+       						</span>
+					</div>
+				</div> {{-- column 9 row ends here --}}
 
-<div class="container">
-	<div class="row">
-		<div class="col-sm-6 show-index-key-info bg-info">
-			<ul>
-				<li><p>Prep Time:</p>
-						{{ $recipe->prep_time}} {{ $recipe->prep_time_type }}
-				</li>
-				<li><p>Cook Time:</p>
-					{{ $recipe->cook_time }} {{ $recipe->cook_time_type }}
-				</li>
-				<li><p>Ready Time:</p>
-						{{ $recipe->ready_time }} {{ $recipe->ready_time_type }}
-				</li>
-				<li><p>Servings:</p>
-						{{ $recipe->servings }}
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
+				<hr>
 
-<div class="container">
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="row">
-				<div class="col-sm-6 col-xs-12 bg-warning">
-					<h3>Ingredients</h3>
-					<p>ingredients go here later dynamically.</p>
-				</div>
 				<div class="row">
-					<div class="col-sm-4 col-xs-12 bg-success">
-						<h3>Instructions</h3>
-						{{ $recipe->instructions }}
+					<div class="col-sm-12 lead">
+						<p><i class="fa fa-quote-left"></i> {{ $recipe->description }} <i class="fa fa-quote-right"></i></p>
 					</div>
 				</div>
+			</div>{{-- big column 9 in section ends here --}}
+		</div> {{--end first row in section--}}
+
+		<hr>
+
+
+		<div class="row">
+			<div class="col-sm-4 media-left">
+				<ul class="show-recipe-social-links">
+					<li><a href="https://www.facebook.com/"><i class="fa fa-facebook-square"></i></a></li>
+					<li><a href="https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://plus.google.com/"><i class="fa fa-google-plus-square"></i></a></li>
+					<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="http://tumblr.com/"><i class="fa fa-tumblr-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+					<li><a href="#"><i class="fa fa-print"></i></a><li>
+				</ul>
 			</div>
-		</div>
+			<div class="col-sm-8 media-right">
+				<a href="#"><i class="fa fa-heart-o fa-4x fa-pull-right"></i></a>
+			</div>
+		</div>{{-- end second row in section--}}
+
 	</div>
 </div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="row">
-				<div class="col-sm-6 col-xs-12 bg-danger">
-					<h3>Helpful Notes</h3>
-					{{ $recipe->notes }}
-				</div>
-				<div class="row show-index-tags">
-					<div class="col-sm-4 col-xs-12 bg-info">
-						@unless ($recipe->tags->isEmpty())
-							<h3>Tags</h3>
-							<ul>
-								@foreach ($recipe->tags as $tag)
-									<li><button type="button" class="btn btn-primary btn-xs ">{{ $tag->name }}</button>
-									</li>
-								@endforeach
-							</ul>
-						@endunless
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-
-							{{--
-
-							<h1>{{ $recipe->name }}</h1>
-
-							<h4>Description</h4>
-							{{ $recipe->description }}
-
-
-								<h4>Instructions</h4>
-								{{ $recipe->instructions }}
-
-								<h4>Notes</h4>
-								{{ $recipe->notes }}
-
-								<h4>Published On:</h4>
-								{{ $recipe->published_at }}
-
-								<h4>Prep Time:</h4>
-								{{ $recipe->prep_time}} {{ $recipe->prep_time_type }}
-
-								<h4>Cook Time:</h4>
-								{{ $recipe->cook_time }} {{ $recipe->cook_time_type }}
-
-								<h4>Ready Time:</h4>
-								{{ $recipe->ready_time }} {{ $recipe->ready_time_type }}
-
-								<h4>Servings:</h4>
-								{{ $recipe->servings }}
-
-								@unless ($recipe->tags->isEmpty())
-								<h4>Tags:</h4>
-								<ul>
-									@foreach ($recipe->tags as $tag)
-										<li>{{ $tag->name }}</li>
-									@endforeach
-								</ul>
-								@endunless
-
-
-	<div class="page-navigation-wrapper">
-		@if( Auth::user()->id == $recipe->user_id)
-		<a href="/recipes/{{ $recipe->id }}/edit"><span class="btn btn-success">Edit your Recipe</span></a>
-		@endif
-	</div>
- --}}
 @stop
 
