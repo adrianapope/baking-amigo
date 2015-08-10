@@ -20,7 +20,7 @@
           </li>
           <li role="presentation">
             <a href="/recipes/create">
-              <span class="btn btn-" role="button">Submit Recipe</span>
+              <span class="btn btn-warning" role="button">Submit Recipe</span>
             </a>
           </li>
         @else
@@ -36,7 +36,7 @@
           </li>
           <li role="presentation">
             <a href="/recipes/create">
-              <span class="btn btn-default" role="button">Submit Recipe</span>
+              <span class="btn btn-warning" role="button">Submit Recipe</span>
             </a>
           </li>
         @endif

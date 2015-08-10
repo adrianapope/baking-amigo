@@ -3058,23 +3058,23 @@ fieldset[disabled] a.btn {
 
 .btn-warning {
   color: #fff;
-  background-color: #f0ad4e;
-  border-color: #eea236; }
+  background-color: #ff6980;
+  border-color: #ff4f6a; }
   .btn-warning:focus,
   .btn-warning.focus {
     color: #fff;
-    background-color: #ec971f;
-    border-color: #985f0d; }
+    background-color: #ff3655;
+    border-color: #cf0020; }
   .btn-warning:hover {
     color: #fff;
-    background-color: #ec971f;
-    border-color: #d58512; }
+    background-color: #ff3655;
+    border-color: #ff1237; }
   .btn-warning:active,
   .btn-warning.active,
   .open > .btn-warning.dropdown-toggle {
     color: #fff;
-    background-color: #ec971f;
-    border-color: #d58512; }
+    background-color: #ff3655;
+    border-color: #ff1237; }
     .btn-warning:active:hover,
     .btn-warning:active:focus,
     .btn-warning:active.focus,
@@ -3085,8 +3085,8 @@ fieldset[disabled] a.btn {
     .open > .btn-warning.dropdown-toggle:focus,
     .open > .btn-warning.dropdown-toggle.focus {
       color: #fff;
-      background-color: #d58512;
-      border-color: #985f0d; }
+      background-color: #ff1237;
+      border-color: #cf0020; }
   .btn-warning:active,
   .btn-warning.active,
   .open > .btn-warning.dropdown-toggle {
@@ -3109,10 +3109,10 @@ fieldset[disabled] a.btn {
   fieldset[disabled] .btn-warning.focus,
   fieldset[disabled] .btn-warning:active,
   fieldset[disabled] .btn-warning.active {
-    background-color: #f0ad4e;
-    border-color: #eea236; }
+    background-color: #ff6980;
+    border-color: #ff4f6a; }
   .btn-warning .badge {
-    color: #f0ad4e;
+    color: #ff6980;
     background-color: #fff; }
 
 .btn-danger {
@@ -4418,10 +4418,10 @@ a.label:focus {
     background-color: #198dbf; }
 
 .label-warning {
-  background-color: #f0ad4e; }
+  background-color: #ff6980; }
   .label-warning[href]:hover,
   .label-warning[href]:focus {
-    background-color: #ec971f; }
+    background-color: #ff3655; }
 
 .label-danger {
   background-color: #d9534f; }
@@ -4639,7 +4639,7 @@ a.thumbnail.active {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
 
 .progress-bar-warning {
-  background-color: #f0ad4e; }
+  background-color: #ff6980; }
   .progress-striped .progress-bar-warning {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
 
