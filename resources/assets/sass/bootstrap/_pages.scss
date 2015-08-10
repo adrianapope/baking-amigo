@@ -3,6 +3,15 @@
 	padding-top: 50px;
 }
 
+.explore-tag-options ul {
+	padding-left: 0;
+}
+
+.explore-tag-options li {
+	display: inline;
+	text-decoration: none;
+}
+
 /* Home Styles */
 
 .jumbotron h1 {
@@ -102,13 +111,12 @@
 
 
 .show-recipe-header-section {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	padding-right: 50px;
-	padding-left: 50px;
-	background: url("/img/pink_rice.png");
-
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
 }
+
 .show-recipe-single h1 {
 	color: #ff6980;
 	font-family: 'Berkshire Swash', cursive;
@@ -121,11 +129,17 @@
 	font-size: 25px;
 }
 
+
+
 .show-recipe-social-links li {
 	display: inline;
 	margin-left: 5px;
 	margin-right: 5px;
 	font-size: 40px;
+}
+
+.show-recipe-username-preview {
+	line-height: 35px;
 }
 
 .media-left ul {
@@ -139,6 +153,11 @@
 .fa-quote-right {
 	font-size: 14px;
 }
+
+.show-recipe-wrapper-main-detailed-info {
+	background: url("/img/pink_rice.png");
+}
+
 
 .fa-heart-o a:hover:before {
 	content: "f08a";
