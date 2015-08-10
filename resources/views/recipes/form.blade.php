@@ -1,22 +1,23 @@
 
 			<div class="form-group">
 				{!! Form::label('name', 'Recipe Name:') !!}
-				{!! Form::text('name', null, ['class' => 'form-control']) !!}
+				{!! Form::text('name', null, ['placeholder' => 'example: Chocolate Chip Cookies', 'class' => 'form-control']) !!}
 			</div>
 
 			<div class="form-group">
 				{!! Form::label('description', 'Description:') !!}
-				{!! Form::textarea('description', null, ['rows'=> '4', 'class' => 'form-control']) !!}
+				{!! Form::textarea('description', null, ['rows'=> '4', 'placeholder' => 'example: These cookies are chewy and moist. If you are craving chocolate, then this recipe is for you. Perfect when paired with a glass of cold almond milk.', 'class' => 'form-control']) !!}
 			</div>
+
 
 			<div class="form-group">
 				{!! Form::label('instructions', 'Instructions:') !!}
-				{!! Form::textarea('instructions', null, ['rows'=> '4', 'class' => 'form-control']) !!}
+				{!! Form::textarea('instructions', null, ['rows'=> '4', 'placeholder' => 'example: Mix together dry ingredients in a large bowl. Mix together wet ingredients in a small bowl. Pour wet ingredients into the dry ingredients a slowly until well combined and resembles dough. Create little dough balls and place on a parchment paper lined cookie sheet.', 'class' => 'form-control']) !!}
 			</div>
 
 			<div class="form-group">
-				{!! Form::label('notes', 'Notes: (optional)') !!}
-				{!! Form::textarea('notes', null, ['rows'=> '4', 'class' => 'form-control']) !!}
+				{!! Form::label('notes', 'Helpful Tips: (optional)') !!}
+				{!! Form::textarea('notes', null, ['rows'=> '4', 'placeholder' => 'example: Chilling your dough for 24 hours prior to baking can enhance the flavor and texture. Also, make sure to let your baked cookies sit for two minutes on the cookie sheet before transferring to a cooling rack.', 'class' => 'form-control']) !!}
 			</div>
 
 			<div class="form-group">
@@ -27,7 +28,7 @@
 			<div class="row">
 				<div class="form-group col-sm-6">
 					{!! Form::label('prep_time', 'Prep Time:') !!}
-					{!! Form::input('prep_time', null, null, ['class' => 'form-control']) !!}
+					{!! Form::input('prep_time', null, null, ['placeholder' => 'example: 25', 'class' => 'form-control']) !!}
 				</div>
 				<div class="form-group col-sm-6">
 					{!! Form::label('prep_time_type', '&nbsp;') !!}
@@ -38,7 +39,7 @@
 			<div class="row">
 				<div class="form-group col-sm-6">
 					{!! Form::label('cook_time', 'Cook Time:') !!}
-					{!! Form::input('cook_time', null, null, ['class' => 'form-control']) !!}
+					{!! Form::input('cook_time', null, null, ['placeholder' => 'example: 10', 'class' => 'form-control']) !!}
 				</div>
 				<div class="form-group col-sm-6">
 					{!! Form::label('cook_time_type', '&nbsp;') !!}
@@ -49,7 +50,7 @@
 			<div class="row">
 				<div class="form-group col-sm-6">
 					{!! Form::label('ready_time', 'Ready Time:') !!}
-					{!! Form::input('ready_time', null, null, ['class' => 'form-control']) !!}
+					{!! Form::input('ready_time', null, null, ['placeholder' => 'example: 35', 'class' => 'form-control']) !!}
 				</div>
 				<div class="form-group col-sm-6">
 					{!! Form::label('ready_time_type', '&nbsp;') !!}
