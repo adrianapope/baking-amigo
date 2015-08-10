@@ -59,15 +59,19 @@
 				<div class="row">
 	        		<div class="col-xs-6 col-sm-3">
 						<img src="img/tiny-cookie.jpg" alt="Cookie" class="img-rounded img-responsive">
+						<h3>Cookies</h3>
 					</div>
 					<div class="col-xs-6 col-sm-3">
 						<img src="img/tiny-bread.jpg" alt="Bread" class="img-rounded img-responsive">
+						<h3>Breads</h3>
 					</div>
 			  		<div class="col-xs-6 col-sm-3">
 						<img src="img/tiny-cupcakes.jpg" alt="Cupcakes" class="img-rounded img-responsive">
+						<h3>Cupcakes</h3>
 					</div>
 				    <div class="col-xs-6 col-sm-3">
 						<img src="img/tiny-handpies.jpg" alt="Handpies" class="img-rounded img-responsive">
+						<h3>Pies</h3>
 					</div>
 					</div>
 		</div>
@@ -77,15 +81,20 @@
 	      <div class="row">
 	        <div class="col-xs-6 col-sm-3">
 				<img src="img/tiny-donuts.jpg" alt="Donuts" class="img-rounded img-responsive">
+				<h3>Donuts</h3>
 			</div>
 			  <div class="col-xs-6 col-sm-3">
 				<img src="img/tiny-cake.jpg" alt="Cake" class="img-rounded img-responsive">
+				<h3>Cakes</h3>
 			</div>
 			  <div class="col-xs-6 col-sm-3">
 				<img src="img/tiny-brownie.jpg" alt="Brownie" class="img-rounded img-responsive">
+				<h3>Brownies</h3>
 			</div>
 			  <div class="col-xs-6 col-sm-3">
 				<img src="img/tiny-raw.jpg" alt="Raw" class="img-rounded img-responsive">
+				<h3>Raw</h3>
+
 				</div>
 			</div>
 		</div>
@@ -95,15 +104,20 @@
 	      <div class="row">
 			  <div class="col-xs-6 col-sm-3">
 				<img src="img/tiny-muffin.jpg" alt="Muffin" class="img-rounded img-responsive">
+			    <h3>Muffins</h3>
 			</div>
 			  <div class="col-xs-6 col-sm-3">
 				<img src="img/tiny-bars.jpg" alt="Bars" class="img-rounded img-responsive">
+				<h3>Bars</h3>
+
 			</div>
 			  <div class="col-xs-6 col-sm-3">
 				<img src="img/tiny-tea.jpg" alt="Tea" class="img-rounded img-responsive">
+				<h3>Tea Time</h3>
 				</div>
 				<div class="col-xs-6 col-sm-3">
 				<img src="img/tiny-macaroons.jpg" alt="Macaroons" class="img-rounded img-responsive">
+				<h3>Ethnic</h3>
 			</div>
 			</div>
 		</div>
