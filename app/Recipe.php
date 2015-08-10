@@ -23,15 +23,7 @@ class Recipe extends Model {
 
 	protected $dates = ['published_at'];
 
-	/**
-	* A recipe can have many ingredients.
-	*
-	* @return \Iluminate\Database\Eloquent\Relations\HasMany
-	*/
-	public function ingredients()
-	{
-		return $this->hasMany('App\Ingredient');
-	}
+
 
 	/**
 	* A recipe is owned by a user.
@@ -89,6 +81,16 @@ class Recipe extends Model {
     {
     	return $this->tags->lists('id');
     }
+
+    /**
+	* A recipe can have many ingredients.
+	*
+	* @return \Iluminate\Database\Eloquent\Relations\HasMany
+	*/
+	public function ingredients()
+	{
+		return $this->hasMany('App\Ingredient');
+	}
 
 }
 
