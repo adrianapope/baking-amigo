@@ -18,7 +18,6 @@ class CreateTagsTable extends Migration {
             $table->timestamps();
         });
 
-//singular and alphabetical order
         Schema::create('recipe_tag', function (Blueprint $table) {
 
             $table->integer('recipe_id')->unsigned()->index();
