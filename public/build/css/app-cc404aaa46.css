@@ -6003,8 +6003,12 @@ button.close {
   text-decoration: none; }
 
 /* Home Styles */
+.jumbotron {
+  background: url("/img/pink_rice.png"); }
+
 .jumbotron h1 {
-  color: #FF8A9C; }
+  color: #FF8A9C;
+  font-family: 'Berkshire Swash', cursive; }
 
 .homepage-heading {
   color: #FF8A9C; }

@@ -9,7 +9,7 @@
 
  			<div class="search-bar-wrapper">
 	 			<div class="row">
-					<div class="col-sm-8 col-sm-offset-2">
+					<div class="col-sm-6 col-sm-offset-3">
 					    <div class="input-group">
 					      <input type="text" class="form-control input-lg" placeholder="What would you like to bake?">
 					      <span class="input-group-btn">
