@@ -20,6 +20,7 @@ class CreateRecipesTable extends Migration {
 			$table->text('description')->nullable();
 			$table->text('instructions');
 			$table->text('notes')->nullable();
+			$table->float('calculated_score');
 			$table->timestamps();
 			$table->timestamp('published_at');
 			$table->integer('prep_time')->nullable();
