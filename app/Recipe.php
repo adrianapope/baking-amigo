@@ -92,5 +92,26 @@ class Recipe extends Model {
 		return $this->hasMany('App\Ingredient');
 	}
 
+  	/**
+	* A recipe can have many reviews.
+	*
+	* @return \Iluminate\Database\Eloquent\Relations\HasMany
+	*/
+	public function reviews()
+	{
+		return $this->hasMany('App\Review');
+	}
+
+
+	/**
+	* A recipe can have many comments.
+	*
+	* @return \Iluminate\Database\Eloquent\Relations\HasMany
+	*/
+	public function comments()
+	{
+		return $this->hasMany('App\Comment');
+	}
+
 }
 
