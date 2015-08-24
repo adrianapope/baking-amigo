@@ -25,6 +25,10 @@ Route::post('recipes', 'RecipesController@store');
 Route::get('recipes/{id}/edit', 'RecipesController@edit');
 Route::post('recipes/{id}', ['as' => 'recipes.update', 'uses' => 'RecipesController@update']);*/
 
+
+#Comments
+Route::post('/recipes/{id}/comments', 'CommentsController@store');
+
 # Recipes
 
 Route::resource('recipes', 'RecipesController');
@@ -32,6 +36,8 @@ Route::resource('recipes', 'RecipesController');
 # Tags
 
 Route::get('tags/{tags}', 'TagsController@show');
+
+
 
 
 # Auth
