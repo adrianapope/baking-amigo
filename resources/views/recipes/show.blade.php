@@ -139,7 +139,7 @@
 		</div>
 
 		<div class="page-navigation-wrapper">
-			@if( Auth::user()->id == $recipe->user_id)
+			@if( Auth::user() && Auth::user()->id == $recipe->user_id)
 			<a href="/recipes/{{ $recipe->id }}/edit"><span class="btn btn-success">Edit your Recipe</span></a>
 			@endif
 		</div>
@@ -148,4 +148,3 @@
 </div>
 
 @stop
-
