@@ -144,6 +144,12 @@
 			@endif
 		</div>
 
+		<form action="/recipes/{{ $recipe->id }}/comments" method="POST">
+			<input type="hidden" name="_token" value="{{ csrf_token() }}">
+			<textarea name="body" class="form-control"></textarea>
+			<input type="submit">
+		</form>
+
 	</div>
 </div>
 
