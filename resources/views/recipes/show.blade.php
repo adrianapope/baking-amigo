@@ -144,13 +144,58 @@
 			@endif
 		</div>
 
+		<hr>
+
+		<h3>REVIEWS</h3>
+
+		{{-- <div class="rating">
+    		<div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
+		    <div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
+		    <div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
+		    <div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
+		    <div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
+		</div>
+ --}}
+		<br>
+
 		<form action="/recipes/{{ $recipe->id }}/comments" method="POST">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
-			<textarea name="body" class="form-control"></textarea>
-			<input type="submit">
+			<div class="star-rating">
+				<select class="form-control" name="rating">
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+					<option value="4">Four</option>
+					<option value="5">Five</option>
+				</select>
+			</div>
+			<textarea name="body" class="form-control"></textarea><br>
+			<input type="submit" class="btn btn-primary" value="Submit">
 		</form>
 
-	</div>
+
+		{{-- display comments and star rating --}}
+		<div class="show-comments-wrapper">
+			<div class="col-md-6">
+				@if (count($comments))
+					<h5>We have {{ count($comments) }} comments.</h5>
+					@foreach ($comments as $comment)
+						@if (count($comment->review))
+							<div>
+								{{ $comment->review->rating }} Stars
+							</div>
+						@endif
+						<div>
+							{{ $comment->body }}
+						</div>
+					@endforeach
+				@else
+					<h5>No comments yet. Be the first!</h5>
+				@endif
+	 		</div>
+		</div>
+
+ 	</div>
 </div>
 
 @stop
