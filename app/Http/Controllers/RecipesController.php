@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Recipe;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -45,7 +46,11 @@ class RecipesController extends Controller
      */
 	public function show(Recipe $recipe)
 	{
-		return view('recipes.show', compact('recipe'));
+
+		$comments = Comment::where('recipe_id', '=', $recipe->id)->get();
+
+		return view('recipes.show', compact('recipe', 'comments'));
+
 	}
 
 
