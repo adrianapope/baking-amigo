@@ -17,7 +17,7 @@ class CreateCommentsTable extends Migration {
 			$table->increments('id');
 			$table->integer('recipe_id');
 			$table->integer('user_id');
-			$table->integer('review_id')->nullable;
+			$table->integer('review_id')->nullable();
 			$table->text('body');
 			$table->timestamps();
 		});
