@@ -16,6 +16,7 @@ Route::get('about', 'PageController@about');
 Route::get('terms', 'PageController@terms');
 Route::get('privacy', 'PageController@privacy');
 
+
 # Recipes
 /*
 Route::get('recipes', 'RecipesController@index');
@@ -27,7 +28,10 @@ Route::post('recipes/{id}', ['as' => 'recipes.update', 'uses' => 'RecipesControl
 
 
 #Comments
-Route::post('/recipes/{id}/comments', 'CommentsController@store');
+Route::group(['middleware' => 'auth'], function () {
+	Route::post('/recipes/{id}/comments', 'CommentsController@store');
+});
+
 
 # Recipes
 
