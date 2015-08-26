@@ -2,6 +2,7 @@
 
 use App\Comment;
 use App\Recipe;
+use App\Review;
 use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Requests\RecipeRequest;
@@ -47,9 +48,13 @@ class RecipesController extends Controller
 	public function show(Recipe $recipe)
 	{
 
-		$comments = Comment::where('recipe_id', '=', $recipe->id)->get();
+		$comments = Comment::where('recipe_id', '=', $recipe->id)
+							->where('review_id', '=', null)
+							->get();
 
-		return view('recipes.show', compact('recipe', 'comments'));
+		$reviews = Review::where('recipe_id', '=', $recipe->id)->get();
+
+		return view('recipes.show', compact('recipe', 'comments', 'reviews'));
 
 	}
 
