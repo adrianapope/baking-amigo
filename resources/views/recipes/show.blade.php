@@ -170,22 +170,6 @@
 						<div class="tab-content">
 							<!-- Tab Pane for Reviews starts here -->
 							<div role="tabpanel" class="tab-pane fade in active" id="reviews">
-								<!-- Review Form-->
-								<form action="/recipes/{{ $recipe->id }}/comments" method="POST">
-									<input type="hidden" name="_token" value="{{ csrf_token() }}">
-									<div class="star-rating">
-										<select class="form-control" name="rating">
-											<option value="1">One</option>
-											<option value="2">Two</option>
-											<option value="3">Three</option>
-											<option value="4">Four</option>
-											<option value="5">Five</option>
-										</select>
-									</div>
-									<textarea name="body" class="form-control"></textarea><br>
-									<input type="submit" class="btn btn-primary" value="Submit Review">
-								</form>
-
 								<!-- Display Review Content -->
 								@if (count($reviews))
 				 					@foreach ($reviews as $review)
@@ -199,17 +183,25 @@
 								@else
 									<h4>No reviews yet. Be the first!</h4>
 								@endif
+								<!-- Review Form-->
+								<form action="/recipes/{{ $recipe->id }}/comments" method="POST">
+									<input type="hidden" name="_token" value="{{ csrf_token() }}">
+									<div class="star-rating">
+										<select class="form-control" name="rating">
+											<option value="1">One</option>
+											<option value="2">Two</option>
+											<option value="3">Three</option>
+											<option value="4">Four</option>
+											<option value="5">Five</option>
+										</select>
+									</div>
+									<textarea name="body" class="form-control" placeholder="What was your experience with this recipe?"></textarea><br>
+									<input type="submit" class="btn btn-primary" value="Submit Review">
+								</form>
 							</div>
 							<!-- Tab Pane for Comments starts here -->
 							<div role="tabpanel" class="tab-pane fade" id="comments">
 								<div class="show-comments-form col-md-6">
-									<!-- Comment Form -->
-								    <form action="/recipes/{{ $recipe->id }}/comments" method="POST">
-										<input type="hidden" name="_token" value="{{ csrf_token() }}">
-										<textarea name="body" class="form-control"></textarea><br>
-										<input type="submit" class="btn btn-primary" value="Submit Comment">
-									</form>
-
 									<!-- Display Comment Content -->
 									@if (count($comments))
 										@foreach ($comments as $comment)
@@ -220,6 +212,12 @@
 									@else
 										<h5>No comments yet. Be the first!</h5>
 									@endif
+									<!-- Comment Form -->
+								    <form action="/recipes/{{ $recipe->id }}/comments" method="POST">
+										<input type="hidden" name="_token" value="{{ csrf_token() }}">
+										<textarea name="body" class="form-control" placeholder="Share your thoughts about this recipe."></textarea><br>
+										<input type="submit" class="btn btn-primary" value="Submit Comment">
+									</form>
 								</div>
 							</div>
 						</div>
