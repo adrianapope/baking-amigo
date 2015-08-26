@@ -146,7 +146,6 @@
 
 		<hr>
 
-		<h3>REVIEWS</h3>
 
 		{{-- <div class="rating">
     		<div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
@@ -157,44 +156,79 @@
 		</div>
  --}}
 		<br>
+		<div class="section show-combo-reviews-comments-form">
+			<div class="row">
+				<div class="show-review-form col-md-6">
+					<h3>REVIEWS</h3>
 
-		<form action="/recipes/{{ $recipe->id }}/comments" method="POST">
-			<input type="hidden" name="_token" value="{{ csrf_token() }}">
-			<div class="star-rating">
-				<select class="form-control" name="rating">
-					<option value="1">One</option>
-					<option value="2">Two</option>
-					<option value="3">Three</option>
-					<option value="4">Four</option>
-					<option value="5">Five</option>
-				</select>
-			</div>
-			<textarea name="body" class="form-control"></textarea><br>
-			<input type="submit" class="btn btn-primary" value="Submit">
-		</form>
-
-
-		{{-- display comments and star rating --}}
-		<div class="show-comments-wrapper">
-			<div class="col-md-6">
-				@if (count($comments))
-					<h5>We have {{ count($comments) }} comments.</h5>
-					@foreach ($comments as $comment)
-						@if (count($comment->review))
-							<div>
-								{{ $comment->review->rating }} Stars
-							</div>
-						@endif
-						<div>
-							{{ $comment->body }}
+					<form action="/recipes/{{ $recipe->id }}/comments" method="POST">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+						<div class="star-rating">
+							<select class="form-control" name="rating">
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+								<option value="4">Four</option>
+								<option value="5">Five</option>
+							</select>
 						</div>
-					@endforeach
-				@else
-					<h5>No comments yet. Be the first!</h5>
-				@endif
-	 		</div>
-		</div>
+						<textarea name="body" class="form-control"></textarea><br>
+						<input type="submit" class="btn btn-primary" value="Submit Review">
+					</form>
 
+					{{-- <div>
+					<!-- Nav Tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a></li>
+							<li role="presentation"><a href="#comments" aria-controls="comments" role="tab" data-toggle="tab">Comments</a></li>
+						</ul>
+
+						<!-- Tab Panes -->
+						<div class="tab-cotent">
+							<div role="tabpanel" class="tab-pane active" id="reviews">...</div>
+							<div role="tabpanel" class="tab-pane" id="comments">...</div>
+						</div>
+					</div> --}}
+
+					@if (count($reviews))
+	 					<h5>We have {{ count($reviews) }} reviews.</h5>
+	 					@foreach ($reviews as $review)
+	 						<div>
+	 							{{ $review->rating }} Stars
+	 						</div>
+	 						<div>
+	 							{{ $review->comment->body }}
+							</div>
+						@endforeach
+					@else
+						<h4>No reviews yet. Be the first!</h4>
+					@endif
+
+				</div>
+
+				<div class="show-comments-form col-md-6">
+					<h3>COMMENTS</h3>
+
+				    <form action="/recipes/{{ $recipe->id }}/comments" method="POST">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+						<textarea name="body" class="form-control"></textarea><br>
+						<input type="submit" class="btn btn-primary" value="Submit Comment">
+					</form>
+
+					@if (count($comments))
+						<h5>We have {{ count($comments) }} comments.</h5>
+						@foreach ($comments as $comment)
+							<div>
+								{{ $comment->body }}
+							</div>
+						@endforeach
+					@else
+						<h5>No comments yet. Be the first!</h5>
+					@endif
+
+				</div>
+			</div>
+		</div>
  	</div>
 </div>
 
