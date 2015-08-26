@@ -28,5 +28,11 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+	<script>
+	$('#myTabs a').click(function (e) {
+  		e.preventDefault()
+  		$(this).tab('show')
+	})
+	</script>
 </body>
 </html>
