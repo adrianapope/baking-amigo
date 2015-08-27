@@ -76,7 +76,7 @@
 				<h5>15 MINS</h5>
 			</div>
 			<div class="col-sm-1">
-				<img class="img-square" src="/img/hat.png" alt="chef hat" width="40" height="48" class="img-responsive img-rounded">
+				<img class="img-square" src="/img/mitten.png" alt="mitten" width="40" height="48" class="img-responsive img-rounded">
 				<h5>BAKE</h5>
 				<h5>15 MINS</h5>
 			</div>
@@ -86,7 +86,7 @@
 				<h5>15 MINS</h5>
 			</div>
 			<div class="col-sm-1">
-				<img class="img-square" src="/img/newpie.png" alt="slice of pie" width="40" height="48" class="img-responsive img-rounded">
+				<img class="img-square" src="/img/cake.png" alt="cake" width="40" height="48" class="img-responsive img-rounded">
 				<h5>SERVES</h5>
 				<h5>12</h5>
 			</div>
@@ -100,7 +100,7 @@
 <div class="section show-recipe-wrapper-main-detailed-info">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 show-recipe-main-detailed-ingredients">
+			<div class="col-sm-4 show-recipe-main-detailed-ingredients">
 				<h3>INGREDIENTS</h3>
 				<p>ingredients go here</p>
 			</div>

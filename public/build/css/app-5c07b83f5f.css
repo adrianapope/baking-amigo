@@ -6078,7 +6078,6 @@ button.close {
 /* Show Page - Shows the recipe fully */
 .show-recipe-header-section {
   padding-top: 20px;
-  padding-bottom: 20px;
   padding-right: 20px;
   padding-left: 20px; }
 
@@ -6109,8 +6108,9 @@ button.close {
 .fa-quote-right {
   font-size: 14px; }
 
-.show-recipe-wrapper-main-detailed-info {
-  background: url("/img/pink_rice.png"); }
+.show-recipe-main-wrapper {
+  background: url("/img/pink_rice.png");
+  padding-top: .5em; }
 
 .fa-heart-o a:hover:before {
   content: "f08a"; }
