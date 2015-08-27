@@ -174,7 +174,7 @@
 					 							{{ $review->rating }} Stars
 					 						</div>
 					 						<div>
-					 							{{ $review->comment->body }}
+					 							<p>{{ $review->comment->body }}</p>
 											</div>
 										@endforeach
 									@else
@@ -204,7 +204,7 @@
 									@if (count($comments))
 										@foreach ($comments as $comment)
 											<div>
-												{{ $comment->body }}
+												<p>{{ $comment->body }}<p>
 											</div>
 										@endforeach
 									@else

@@ -6118,6 +6118,12 @@ button.close {
 .fa-heart-o a:hover:after {
   content: "f004"; }
 
+.show-recipe-comments-form p {
+  padding-bottom: 1em; }
+
+.show-recipe-reviews-form p {
+  padding-bottom: 1em; }
+
 /* Footer */
 footer {
   padding-top: 60px;
