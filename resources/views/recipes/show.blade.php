@@ -107,25 +107,21 @@
 			<div class="col-sm-6 show-recipe-main-detailed-instructions">
 				<h3>INSTRUCTIONS</h3>
 				<p>{{ $recipe->instructions }}</p>
-
-				<hr>
-
-				<h3>TIPS</h3>
-				<p>{{ $recipe->notes }}</p>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="section show-recipes-review wrapper">
+<div class="section show-recipe-tips">
 	<div class="container">
-		<div class="row show-recipe-review-single">
+		<div class="row">
 			<div class="col-sm-6">
-				<h3>REVIEWS</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic cum perferendis non in nobis incidunt voluptas necessitatibus corrupti laboriosam adipisci vel esse unde facere odio dolore expedita, aliquid quaerat eveniet?
-				</p>
+				<h3>TIPS</h3>
+				<p>{{ $recipe->notes }}</p>
 			</div>
 		</div>
+
+		<hr>
 
 		<div class="explore-tag-options">
 			<h3>TYPE</h3>
@@ -156,7 +152,7 @@
 		</div>
  --}}
 		<br>
-		<div class="section show-reviews-and-comments-tabs">
+		<div class="section show-recipe-reviews-and-comments-tabs">
 			<div class="row">
 				<div class="col-md-6">
 
@@ -170,7 +166,7 @@
 						<div class="tab-content">
 							<!-- Tab Pane for Reviews starts here -->
 							<div role="tabpanel" class="tab-pane fade in active" id="reviews">
-								<div class="show-reviews-form">
+								<div class="show-recipe-reviews-form">
 									<!-- Display Review Content -->
 									@if (count($reviews))
 					 					@foreach ($reviews as $review)
@@ -203,7 +199,7 @@
 							</div>
 							<!-- Tab Pane for Comments starts here -->
 							<div role="tabpanel" class="tab-pane fade" id="comments">
-								<div class="show-comments-form col-md-6">
+								<div class="show-recipe-comments-form col-md-6">
 									<!-- Display Comment Content -->
 									@if (count($comments))
 										@foreach ($comments as $comment)
