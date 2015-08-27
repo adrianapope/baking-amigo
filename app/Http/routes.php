@@ -29,7 +29,7 @@ Route::post('recipes/{id}', ['as' => 'recipes.update', 'uses' => 'RecipesControl
 
 #Comments
 Route::group(['middleware' => 'auth'], function () {
-	Route::post('/recipes/{id}/comments', 'CommentsController@store');
+	Route::get('/recipes/{id}/comments', 'CommentsController@store');
 });
 
 
