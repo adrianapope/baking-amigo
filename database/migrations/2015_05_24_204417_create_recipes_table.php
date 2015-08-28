@@ -17,6 +17,7 @@ class CreateRecipesTable extends Migration {
 			$table->increments('id');
 			$table->string('name');
 			$table->integer('user_id')->unsigned();
+			$table->text('ingredients');
 			$table->text('description')->nullable();
 			$table->text('instructions');
 			$table->text('notes')->nullable();
