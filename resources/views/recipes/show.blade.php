@@ -102,7 +102,7 @@
 		<div class="row">
 			<div class="col-sm-4 show-recipe-main-detailed-ingredients">
 				<h3>INGREDIENTS</h3>
-				<p>ingredients go here</p>
+				<p>{{ $recipe->ingredients }}</p>
 			</div>
 			<div class="col-sm-6 show-recipe-main-detailed-instructions">
 				<h3>INSTRUCTIONS</h3>
