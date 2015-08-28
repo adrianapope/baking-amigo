@@ -20,6 +20,7 @@ class CreateCommentsTable extends Migration {
 			$table->integer('review_id')->nullable();
 			$table->text('body');
 			$table->timestamps();
+
 		});
 	}
 
