@@ -9,6 +9,10 @@
 				{!! Form::textarea('description', null, ['rows'=> '4', 'placeholder' => 'example: These cookies are chewy and moist. If you are craving chocolate, then this recipe is for you. Perfect when paired with a glass of cold almond milk.', 'class' => 'form-control']) !!}
 			</div>
 
+			<div class="form-group">
+				{!! Form::label('ingredients', 'Ingredients:') !!}
+				{!! Form::textarea('ingredients', null, ['rows'=> '4', 'placeholder' => 'example: 3 cups flour, 1 cup sugar, 1 tsp. pure vanilla extract, 1/2 cup Earth Balance, 1 bag semi-dark chocolate chips', 'class' => 'form-control']) !!}
+			</div>
 
 			<div class="form-group">
 				{!! Form::label('instructions', 'Instructions:') !!}
