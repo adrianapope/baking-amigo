@@ -139,34 +139,40 @@
 				<div class="col-sm-2">
 					@if( Auth::user() && Auth::user()->id == $recipe->user_id)
 						<a href="/recipes/{{ $recipe->id }}/edit"><span class="btn btn-success">Edit your Recipe</span></a>
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#flash-overlay-modal">Delete</button>
+
 					@endif
 				</div>
 
-				<div class="delete-record-wrapper">
-					<div class="col-sm-2">
-						@if( Auth::user() && Auth::user()->id == $recipe->user_id)
-							{!! Form::open([
-								'method' => 'DELETE',
-								'route'  => ['recipes.destroy', $recipe->id] ]) !!}
-								{!! Form::submit('Delete your Recipe', ['class' => 'btn btn-primary']) !!}
-							{!! Form::close() !!}
-						@endif
-					</div>
-				</div>
-			</div>
-		</div>
+
+				<div id="flash-overlay-modal" class="modal" fade>
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">Are you sure you want to delete this?</h4>
+							</div>
+							<div class="modal-body">
+								<p>Deleting your recipe is final, and changes can not be undone. If you click the Delete button, you will lose your recipe forever.
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+								@if( Auth::user() && Auth::user()->id == $recipe->user_id)
+									{!! Form::open([
+									'method' => 'DELETE',
+									'route'  => ['recipes.destroy', $recipe->id] ]) !!}
+									{!! Form::submit('Delete your Recipe', ['class' => 'btn btn-primary']) !!}
+									{!! Form::close() !!}
+								@endif
+							</div><!-- /.modal-footer -->
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.flash-overlay-modal -->
+			</div><!-- /.row -->
+		</div><!-- /.page-navigation-wrapper -->
 
 		<hr>
-
-
-		{{-- <div class="rating">
-    		<div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
-		    <div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
-		    <div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
-		    <div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
-		    <div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
-		</div>
- --}}
 
 		<div class="section show-recipe-reviews-and-comments-tabs">
 			<div class="row">
