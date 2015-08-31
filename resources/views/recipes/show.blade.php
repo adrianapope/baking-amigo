@@ -135,16 +135,25 @@
 		</div>
 
 		<div class="page-navigation-wrapper">
-			@if( Auth::user() && Auth::user()->id == $recipe->user_id)
-				<a href="/recipes/{{ $recipe->id }}/edit"><span class="btn btn-success">Edit your Recipe</span></a>
-			@endif
-			@if( Auth::user() && Auth::user()->id == $recipe->user_id)
-				{!! Form::open([
-					'method' => 'DELETE',
-					'route'  => ['recipes.destroy', $recipe->id] ]) !!}
-					{!! Form::submit('Delete your Recipe', ['class' => 'btn btn-primary']) !!}
-				{!! Form::close() !!}
-			@endif
+			<div class="row">
+				<div class="col-sm-2">
+					@if( Auth::user() && Auth::user()->id == $recipe->user_id)
+						<a href="/recipes/{{ $recipe->id }}/edit"><span class="btn btn-success">Edit your Recipe</span></a>
+					@endif
+				</div>
+
+				<div class="delete-record-wrapper">
+					<div class="col-sm-2">
+						@if( Auth::user() && Auth::user()->id == $recipe->user_id)
+							{!! Form::open([
+								'method' => 'DELETE',
+								'route'  => ['recipes.destroy', $recipe->id] ]) !!}
+								{!! Form::submit('Delete your Recipe', ['class' => 'btn btn-primary']) !!}
+							{!! Form::close() !!}
+						@endif
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<hr>
@@ -158,7 +167,6 @@
 		    <div class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star-empty"></span></div>
 		</div>
  --}}
-		<br>
 
 		<div class="section show-recipe-reviews-and-comments-tabs">
 			<div class="row">
