@@ -136,7 +136,14 @@
 
 		<div class="page-navigation-wrapper">
 			@if( Auth::user() && Auth::user()->id == $recipe->user_id)
-			<a href="/recipes/{{ $recipe->id }}/edit"><span class="btn btn-success">Edit your Recipe</span></a>
+				<a href="/recipes/{{ $recipe->id }}/edit"><span class="btn btn-success">Edit your Recipe</span></a>
+			@endif
+			@if( Auth::user() && Auth::user()->id == $recipe->user_id)
+				{!! Form::open([
+					'method' => 'DELETE',
+					'route'  => ['recipes.destroy', $recipe->id] ]) !!}
+					{!! Form::submit('Delete your Recipe', ['class' => 'btn btn-primary']) !!}
+				{!! Form::close() !!}
 			@endif
 		</div>
 
@@ -152,6 +159,7 @@
 		</div>
  --}}
 		<br>
+
 		<div class="section show-recipe-reviews-and-comments-tabs">
 			<div class="row">
 				<div class="col-md-6">
@@ -224,5 +232,4 @@
 			</div>
 		</div>
 	</div>
-
 @stop
