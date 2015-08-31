@@ -10,7 +10,6 @@ Route::get('/', 'PageController@index');
 Route::get('home', 'HomeController@index');
 
 # Pages
-
 Route::get('contact', 'PageController@contact');
 Route::get('about', 'PageController@about');
 Route::get('terms', 'PageController@terms');
@@ -34,34 +33,28 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 # Recipes
-
 Route::resource('recipes', 'RecipesController');
 
-# Tags
 
+# Tags
 Route::get('tags/{tags}', 'TagsController@show');
 
 
-
-
 # Auth
-
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
 
-# Middleware
 
+# Middleware
 Route::get('foo', ['middleware' => 'manager', function()
 {
     return 'this page may only be viewed by managers';
 }]);
 
+
 # Profile
 Route::get('/users/{profile}', 'ProfilesController@show');
 Route::get('/users/{profile}/edit', 'ProfilesController@edit');
 Route::post('/users/{profile}/update', 'ProfilesController@update');
-
-
-
