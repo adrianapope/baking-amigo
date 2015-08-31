@@ -10,7 +10,7 @@
 		</div>
 		<div class="404-photo-wrapper">
 			<div class="body">
-				<img src="img/test.png" alt="Fox" class="img-rounded img-responsive">
+				<img src="/img/fox.png" alt="Fox" class="img-rounded img-responsive">
 			</div>
 		</div>
 	</div>
