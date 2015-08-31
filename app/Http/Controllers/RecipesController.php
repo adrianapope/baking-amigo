@@ -148,4 +148,24 @@ class RecipesController extends Controller
 
 		return $recipe;
 	}
+
+	/**
+	* Destroys a recipe record in the Recipes database.
+	*
+	* @param  Recipe $recipe
+	* @return mixed
+	*/
+	public function destroy(Recipe $recipe)
+	{
+
+		// delete the recipe record
+		$recipe->delete();
+
+		// flash message
+		session()->flash('flash_message', 'Recipe successfully deleted.');
+
+		// return a view
+		return redirect('recipes');
+
+	}
 }
