@@ -31,15 +31,15 @@
 					</div>
 					<div class="col-sm-6 show-recipe-review-preview">
 						<strong><a href="#">READ REVIEWS</a></strong>
-						<span class="show-recipe-rating">
-      					<span class="star">★</span>
-      					<span class="star">★</span>
-      					<span class="star">★</span>
-      					<span class="star">★</span>
-      					<span class="star">★</span>
-   						</span>
+						<div class="show-average-rating">
+							@if  (count($reviews) == 1)
+								{!! get_stars($recipe->avg_rating) !!} <span> 1 review </span>
+							@else
+								<span>{!! get_stars($recipe->avg_rating) !!} </span> {{ count($reviews) }} reviews</span>
+							@endif
+						</div>
 					</div>
-				</div> {{-- column 9 row ends here --}}
+				</div>{{-- column 9 row ends here --}}
 
 				<hr>
 
