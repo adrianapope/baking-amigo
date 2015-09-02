@@ -12,6 +12,7 @@ class Recipe extends Model {
 		'ingredients',
 		'notes',
 		'instructions',
+		'avg_rating',
 		'prep_time',
 		'prep_time_type',
 		'cook_time',
