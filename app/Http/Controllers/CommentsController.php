@@ -4,6 +4,7 @@ use App\Recipe;
 use App\Comment;
 use App\Review;
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,7 +27,6 @@ class CommentsController extends Controller {
 
 
 		// check if review exists
-
 		if( isset($request['rating']) ) {
 
 			// create the new review
@@ -40,13 +40,23 @@ class CommentsController extends Controller {
 			// attach the review to the comment
 			$comment->review_id = $review->id;
 
-			// save properly to include review_id
+			// save comment to include review_id
 			$comment->save();
+
+			// sum of the reviews for current recipe
+			$average = DB::table('reviews')
+							->where('recipe_id', $recipe->id)
+						 	->avg('rating');
+
+			//set the avg_rating attribute of the recipe to equal the value of the $average rounded to the nearest decimal
+			$recipe->avg_rating = round($average, 2);
+
+			// save recipe
+			$recipe->save();
 		}
 
 		//return view
 		return redirect("/recipes/$recipe->id");
 	}
-
 
 }
