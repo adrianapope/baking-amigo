@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Requests\ProfileFormRequest;
 use App\User;
+use App\Profile;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -80,10 +81,34 @@ class ProfilesController extends Controller {
 
 			session()->flash('flash_message', 'Awesome! Your profile has been successfully updated.');
 
-			return redirect("/users/$user->id/edit");
+			return redirect("/users/$user->id");
 		}
 
 		return abort(404);
+
+	}
+
+	public function create()
+	{
+
+		$user = Auth::user();
+
+		// try to find the profile id that matches the user profile
+		try
+		{
+			$profile = Profile::where('user_id', $user->id)->firstOrFail();
+
+		} catch(ModelNotFoundException $e) {
+			// if it fails create profile
+			$profile = new Profile();
+			$profile->user_id = $user->id;
+			$profile->save();
+
+			session()->flash('flash_message_permanent', 'Welcome to Baking Amigo! Now tell us a bit about yourself.');
+
+		}
+		// redirect to the edit page
+		return redirect("/users/$user->id/edit");
 
 	}
 }
