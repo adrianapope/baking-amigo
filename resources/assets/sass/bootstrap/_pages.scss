@@ -130,7 +130,22 @@
 	color: #ff6980;
 	font-family: 'Lobster', cursive;
 	font-style: bold;
-	font-size: 56;
+	font-size: 56px;
+}
+
+.fa.fa-star,
+.fa.fa-star-half-o,
+.fa.fa-star-o {
+	font-size: 30px;
+}
+
+.fa.fa-star,
+.fa.fa-star-half-o {
+	color: #e3cf7a;
+}
+
+.fa.fa-star-o {
+	color: #777777;
 }
 
 .show-recipe-social-links li {
