@@ -11,7 +11,4 @@
 				</div>
 		</div>
 	</div>
-	<div class="errors-wrapper">
-	@include ('errors.list')
-	</div>
 @stop

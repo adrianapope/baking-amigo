@@ -1,9 +1,6 @@
 @extends('app')
 
 @section('content')
-	<div class="errors-wrapper">
-		@include ('errors.list')
-	</div>
 	<div class="container">
 		<div class="create-index">
 
