@@ -20,6 +20,7 @@ class AuthController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+	protected $redirectPath = '/profiles/create';
     protected $redirectTo = '/recipes';
 
 
