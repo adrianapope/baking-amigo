@@ -1,11 +1,6 @@
 <?php
 
 # Home
-/*Route::get('/test', function() {
-	$img = Image::make('img/slice-of-cake.jpg')->crop(200, 200)->save('img/test123.jpg');
-
-	echo "<img src='img/test123.jpg'>";
-});*/
 Route::get('/', 'PageController@index');
 Route::get('home', 'HomeController@index');
 
@@ -24,7 +19,6 @@ Route::get('recipes/{id}', 'RecipesController@show');
 Route::post('recipes', 'RecipesController@store');
 Route::get('recipes/{id}/edit', 'RecipesController@edit');
 Route::post('recipes/{id}', ['as' => 'recipes.update', 'uses' => 'RecipesController@update']);*/
-
 
 #Comments
 Route::group(['middleware' => 'auth'], function () {
@@ -55,6 +49,7 @@ Route::get('foo', ['middleware' => 'manager', function()
 
 
 # Profile
-Route::get('/users/{profile}', 'ProfilesController@show');
-Route::get('/users/{profile}/edit', 'ProfilesController@edit');
-Route::post('/users/{profile}/update', 'ProfilesController@update');
+Route::get('/users/{id}', 'ProfilesController@show');
+Route::get('/users/{id}/edit', 'ProfilesController@edit');
+Route::get('/profiles/create', 'ProfilesController@create');
+Route::post('/users/{id}/update', 'ProfilesController@update');
