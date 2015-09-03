@@ -19,7 +19,7 @@
 
 	<script src="//code.jquery.com/jquery.js"></script>
     <script>
-    	$('div.alert').not('.alert-important').delay(3000).slideUp(300);
+    	$('div.alert').not('.alert-permanent').delay(3000).slideUp(300);
     </script>
 
 	<script src="{{ elixir('js/app.js') }}"></script>
