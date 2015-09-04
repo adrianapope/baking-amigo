@@ -4,7 +4,8 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Recipe extends Model {
+class Recipe extends Model
+{
 
 	protected $fillable = [
 		'name',
@@ -113,6 +114,17 @@ class Recipe extends Model {
 	public function comments()
 	{
 		return $this->hasMany('App\Comment');
+	}
+
+	/**
+	*
+	* A recipe is composed of many photos.
+	*
+	* @return $this \Illuminate\Database\Eloquent\Relations\HasMany
+	*/
+	public function photos()
+	{
+		return $this->hasMany('App\Photo');
 	}
 
 }
