@@ -15,12 +15,14 @@ elixir(function(mix) {
 
     mix.sass([
 		'bootstrap.scss',
-		'libs/select2.min.css'
+		'libs/select2.min.css',
+        'libs/sweetalert.css'
 	], 'public/css/app.css')
     .scripts([
         'libs/bootstrap.js',
         'libs/jquery.js',
-        'libs/select2.min.js'
+        'libs/select2.min.js',
+        'libs/sweetalert-dev.js'
     ], 'public/js/app.js')
     .version([
         'public/css/app.css',
