@@ -12,10 +12,13 @@ class CreateRecipePhotosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('photos', function(Blueprint $table)
+		Schema::create('recipe_photos', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('photo_id')->references('id')->on('recipes')->onDelete('cascade');
+
+			$table->integer('recipe_id')->unsigned();
+			$table->foreign('recipe_id')->references('id')->on('recipes')->onDelete('cascade');			
+
 			$table->string('path');
 			$table->timestamps();
 		});
