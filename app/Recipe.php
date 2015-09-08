@@ -118,7 +118,7 @@ class Recipe extends Model
 
 	/**
 	*
-	* A recipe is composed of many photos.
+	* A recipe is composed of many photos. A photo belongs to a specific recipe.
 	*
 	* @return $this \Illuminate\Database\Eloquent\Relations\HasMany
 	*/
