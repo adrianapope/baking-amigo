@@ -74,10 +74,6 @@
         {!! Form::select('tag_list[]', $tags, null, ['id' => 'tag_list', 'class' => 'form-control', 'multiple']) !!}
     </div>
 
-	<div class="form-group">
-		<label for="photos">Photos:</label>
-		<input type="file" name="photos" class="form-control" value="{{ old('photos') }}">
-	</div>
 
 	<div class="form-group">
 		{!! Form::submit($submitButtonText, ['class' => 'btn btn-primary form-control']) !!}
