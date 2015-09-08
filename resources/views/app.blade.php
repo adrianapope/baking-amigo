@@ -13,17 +13,17 @@
 
  	</head>
 <body>
+	 @include('errors.errors')
 	@include('layouts.nav')
-        @include('partials.flash')
-		@yield('content')
+	@yield('content')
 
 	<script src="//code.jquery.com/jquery.js"></script>
+
     <script>
-    	$('div.alert').not('.alert-permanent').delay(3000).slideUp(300);
-    </script>
+/*    	$('div.alert').not('.alert-permanent').delay(3000).slideUp(300);
+*/  </script>
 
 	<script src="{{ elixir('js/app.js') }}"></script>
-	@include('layouts.footer')
 
 	<script>
 		$('#myTabs a').click(function (e) {
@@ -31,5 +31,10 @@
 	  		$(this).tab('show')
 		});
 	</script>
+
+	@include('layouts.footer')
+
+	@include('partials.flash')
+
 </body>
 </html>
