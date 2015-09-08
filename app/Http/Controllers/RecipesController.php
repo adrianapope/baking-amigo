@@ -66,8 +66,8 @@ class RecipesController extends Controller
 	*/
 	public function create()
 	{
-		flash()->overlay('Welcome', 'blah blah blah.');
-
+/*		flash()->overlay('Welcome', 'blah blah blah.');
+*/
 		$tags = Tag::lists('name', 'id');
 
         return view('recipes.create', compact('tags'));
