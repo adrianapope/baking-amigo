@@ -147,8 +147,8 @@ return [
 		'App\Providers\RouteServiceProvider',
         'App\Providers\ViewComposerServiceProvider',
 
-        'Laracasts\Flash\FlashServiceProvider',
-        'Intervention\Image\ImageServiceProvider'
+/*        'Laracasts\Flash\FlashServiceProvider',
+*/        'Intervention\Image\ImageServiceProvider'
 
 
 	],
@@ -200,8 +200,8 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
-        'Flash'     => 'Laracasts\Flash\Flash',
-        'Image'     => 'Intervention\Image\Facades\Image'
+/*        'Flash'     => 'Laracasts\Flash\Flash',
+*/        'Image'     => 'Intervention\Image\Facades\Image'
 
 	],
 
