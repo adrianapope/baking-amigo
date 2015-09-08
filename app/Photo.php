@@ -7,7 +7,7 @@ class Photo extends Model
 	protected $table = 'recipe_photos';
 
 
-	protected $fillable = ['photo'];
+	protected $fillable = ['path'];
 
 	/**
 	*
