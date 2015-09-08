@@ -22,14 +22,17 @@ class RecipeRequest extends Request {
 	public function rules()
 	{
 		return [
-			'name' => 'required|min:3',
-			'description' => 'required',
-			'instructions' => 'required',
-			'published_at' => 'required|date',
-			'prep_time' => 'integer',
-/*			'cook_time' => 'required|integer',
-*/			'cook_time_type' => 'required',
-			'ready_time' => 'integer',
+			'name' 				=> 'required|min:3',
+			'ingredients' 		=> 'required',
+			'description' 		=> 'required',
+			'instructions' 		=> 'required',
+			'published_at' 		=> 'required|date',
+			/*'prep_time' 		=> 'required|integer',
+			'cook_time' 		=> 'required|integer',
+			'cook_time_type' 	=> 'required',
+			'ready_time' 		=> 'required|integer',
+			'ready_time_type' 	=> 'required',
+			'servings'			=> 'required',*/
 		];
 	}
 }
