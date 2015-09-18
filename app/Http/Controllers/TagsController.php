@@ -7,7 +7,7 @@ use App\Tag;
 
 class TagsController extends Controller {
 
-	public function show(Tag $tag)
+	public function show(Tag $tag = null)
 	{
 		$recipes = $tag->recipes()->published()->get();
 
