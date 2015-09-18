@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 class CreateRecipesTable extends Migration {
 
 	/**
-	 * Run the migrations.
+	 * Run the Recipes migrations.
 	 *
 	 * @return void
 	 */
