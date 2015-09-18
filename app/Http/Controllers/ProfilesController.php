@@ -79,7 +79,7 @@ class ProfilesController extends Controller {
 			$profile->instagram_username = $request['instagram_username'];
 			$profile->save();
 
-			session()->flash('flash_message', 'Awesome! Your profile has been successfully updated.');
+			flash()->success('Awesome!', 'Your profile has been successfully updated.');
 
 			return redirect("/users/$user->id");
 		}
@@ -104,7 +104,7 @@ class ProfilesController extends Controller {
 			$profile->user_id = $user->id;
 			$profile->save();
 
-			session()->flash('flash_message_permanent', 'Welcome to Baking Amigo! Now tell us a bit about yourself.');
+			flash()->overlay('Welcome to Baking Amigo!', 'Now tell us a bit about yourself.', 'info');
 
 		}
 		// redirect to the edit page
