@@ -66,8 +66,7 @@ class RecipesController extends Controller
 	*/
 	public function create()
 	{
-/*		flash()->overlay('Welcome', 'blah blah blah.');
-*/
+
 		$tags = Tag::lists('name', 'id');
 
         return view('recipes.create', compact('tags'));
@@ -86,9 +85,7 @@ class RecipesController extends Controller
 
 		$this->createRecipe($request);
 
-/*	    session()->flash('flash_message', 'Sweet! Your recipe has been successfully created.');
-*/
-		flash('Sweet!', 'Your recipe has been successfully created.');
+		flash()->success('Sweet!', 'Your recipe has been successfully created.');
 
         return redirect('recipes');
     }
@@ -123,8 +120,6 @@ class RecipesController extends Controller
 
 		$this->syncTags($recipe, $request->input('tag_list'));
 
-/*		session()->flash('flash_message', 'Good job! Your recipe has been successfully edited.');
-*/
 		flash()->success('Good job!', 'Your recipe has been successfully edited.');
 
 		return redirect('recipes');
@@ -135,7 +130,7 @@ class RecipesController extends Controller
 	* Sync up the list of tags in the databse.
 	*
 	*/
-	private function syncTags(Recipe $recipe, array $tags)
+	private function syncTags(Recipe $recipe, array $tags = null)
 	{
 		$recipe->tags()->sync((array) $tags);
 	}
@@ -167,9 +162,6 @@ class RecipesController extends Controller
 		// delete the recipe record
 		$recipe->delete();
 
-		// flash message
-/*		session()->flash('flash_message', 'Your recipe has been deleted.');
-*/
 		flash()->success('Heads up', 'Your recipe has been successfully deleted.');
 
 		// return a view
