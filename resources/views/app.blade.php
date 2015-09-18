@@ -11,9 +11,9 @@
 	<meta name="description" content="Recipes for bakers of all skill levels! Join today for free.">
  	@yield('customMeta')
 
- 	</head>
+</head>
 <body>
-	 @include('errors.errors')
+	@include('errors.errors')
 	@include('layouts.nav')
 	@yield('content')
 
