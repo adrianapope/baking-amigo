@@ -81,8 +81,8 @@ class Flash
 
 
 
-// $flash->message('Hello There');
-// $flash->error('')
-// $flash->aside()
-// $flash->overlay()
-// $flash->success()
+// $flash->info('Hello There');
+// $flash->error('Hello There');
+// $flash->aside('Hello There');
+// $flash->overlay('Hello There');
+// $flash->success('Hello There');
