@@ -4,6 +4,7 @@
 Route::get('/', 'PageController@index');
 Route::get('home', 'HomeController@index');
 
+
 # Pages
 Route::get('contact', 'PageController@contact');
 Route::get('about', 'PageController@about');
@@ -19,6 +20,7 @@ Route::get('recipes/{id}', 'RecipesController@show');
 Route::post('recipes', 'RecipesController@store');
 Route::get('recipes/{id}/edit', 'RecipesController@edit');
 Route::post('recipes/{id}', ['as' => 'recipes.update', 'uses' => 'RecipesController@update']);*/
+
 
 #Comments
 Route::group(['middleware' => 'auth'], function () {
