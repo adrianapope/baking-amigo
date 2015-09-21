@@ -61,7 +61,7 @@ class RecipesController extends Controller
 
 
 	/**
-	* Show the page to create a new recipe.
+	* Returns the view for the create form.
 	*
 	*/
 	public function create()
@@ -75,7 +75,7 @@ class RecipesController extends Controller
 
 
 	/**
-	* Save a new recipe.
+	* Save a new recipe to the database.
 	*
 	* @param RecipeRequest $request
 	* @param Response
@@ -90,10 +90,43 @@ class RecipesController extends Controller
         return redirect('recipes');
     }
 
+	/**
+	* Apply a photo to the referenced recipe.
+	*
+	* @param integer $id
+	* @param Request $request
+	*/
+	public function addPhoto($id, Request $request)
+	{
+		// validate the request object
+		// and compare this against the photo
+		// and only allow these mime types
+		$this->validate($request, [
+			'photo' => 'required|mimes:jpg,jpeg,png,bmp'
+		]);
+
+		// grab the uploaded file instance
+		$file = ($request->file('photo'));
+
+		// set up a defualt name
+		$name = time() . $file->getClientOriginalName();
+
+		// move the file to new location, pass in variable for name
+		$file->move('recipes/photos', $name);
+
+		// find the current recipe
+		$recipe = Recipe::where('id', '=', $id)->first();
+
+		// link current recipe to photo
+		// and create a new photo (where the directory path is this)
+		$recipe->photos()->create(['path' => "/recipes/photos/{$name}"]);
+	}
+
+
 
 
 	/**
-	* Shows a page to edit an existing recipe
+	* Returns the view for edit form. Retrieves information (original content) to edit existing recipe.
 	*
      * @param Recipe $recipe
      * @return Response
@@ -108,7 +141,7 @@ class RecipesController extends Controller
 
 
     /**
-     *  Update a recipe.
+     *  Update a recipe. Processes the input (post request)
      *
      * @param Recipe $recipe
      * @param RecipeRequest $request
