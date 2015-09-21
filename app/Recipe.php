@@ -40,7 +40,7 @@ class Recipe extends Model
 
 	// convention is scopeName
 	// and that will accept our query builder
-	public function scopePublished($query) 
+	public function scopePublished($query)
 	{
  		$query->where('published_at', '<=', Carbon::now())->get();
 	}
