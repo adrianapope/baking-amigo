@@ -121,8 +121,6 @@
 			</div>
 		</div>
 
-		<hr>
-
 		<div class="explore-tag-options">
 			<h3>TYPE</h3>
 			@unless ($recipe->tags->isEmpty())
@@ -132,6 +130,25 @@
 					@endforeach
 				</ul>
 			@endunless
+		</div>
+
+		<hr>
+
+		<div class="show-recipe-display-photos">
+			<h3>VIEW PHOTOS</h3>
+			@foreach ($recipe->photos as $photo)
+				<img src="{{ $photo->path }}" alt="">
+			@endforeach
+		</div>
+
+		<hr>
+
+
+		<div class="show-recipe-photo-form">
+			<h3>ADD YOUR PHOTOS</h3>
+			<form id="addPhotosForm" action="/recipes/{{ $recipe->id }}/photos" method="POST" class="dropzone">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+			</form>
 		</div>
 
 		<div class="page-navigation-wrapper">
@@ -226,7 +243,7 @@
 									@if (count($comments))
 										@foreach ($comments as $comment)
 											<div>
-												<p>{{ $comment->body }}<p>
+												<p>{{ $comment->body }}</p>
 											</div>
 										@endforeach
 									@else
