@@ -14,7 +14,7 @@
 				<div class="row">
 					@foreach($fourRecipes as $recipe)
 						<div class="col-sm-3">
-							<img src="img/tiny-cookie.jpg" alt="Cookie" class="img-rounded img-responsive">
+							<img src="/img/tiny-cookie.jpg" alt="Cookie" class="img-rounded img-responsive">
 							<h2>
 							<a href="/recipes/{{ $recipe->id }}">{{ ucwords($recipe->name) }}</a>
 							</h2>
@@ -25,8 +25,6 @@
 				</div>
 				<hr>
 			@endforeach
-
-			<hr>
 
 			<div class="row">
 				<div class="col-sm-12">

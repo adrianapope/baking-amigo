@@ -22,14 +22,14 @@ Route::get('recipes/{id}/edit', 'RecipesController@edit');
 Route::post('recipes/{id}', ['as' => 'recipes.update', 'uses' => 'RecipesController@update']);*/
 
 
-#Comments
+Route::get('/recipes/index', 'RecipesController@index'); //temporary fix /'recipes' not working :-(
+Route::resource('recipes', 'RecipesController');
+Route::post('/recipes/{id}/photos', 'RecipesController@addPhoto');
+
+# Comments
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/recipes/{id}/comments', 'CommentsController@store');
 });
-
-
-# Recipes
-Route::resource('recipes', 'RecipesController');
 
 
 # Tags
@@ -55,3 +55,5 @@ Route::get('/users/{id}', 'ProfilesController@show');
 Route::get('/users/{id}/edit', 'ProfilesController@edit');
 Route::get('/profiles/create', 'ProfilesController@create');
 Route::post('/users/{id}/update', 'ProfilesController@update');
+
+
