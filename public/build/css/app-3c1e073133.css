@@ -6131,6 +6131,9 @@ button.close {
 .fa-heart-o a:hover:after {
   content: "f004"; }
 
+.show-recipe-display-photos img {
+  max-width: 50%; }
+
 .show-recipe-comments-form p {
   padding-bottom: 1em; }
 

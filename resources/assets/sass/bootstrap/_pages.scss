@@ -17,6 +17,7 @@
 	text-decoration: none;
 }
 
+
 /* Home Styles */
 
 .jumbotron {
@@ -183,6 +184,10 @@
 
 .fa-heart-o a:hover:after {
 	content: "f004";
+}
+
+.show-recipe-display-photos img {
+	max-width: 50%;
 }
 
 .show-recipe-comments-form p {
