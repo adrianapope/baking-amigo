@@ -15,7 +15,7 @@
 				<div class="col-sm-2">
 					<h4>Discover</h4>
 					<ul class="footer-links">
-						<li><a href="recipes">Recipes</a></li>
+						<li><a href="/recipes/index">Recipes</a></li>
 						<li><a href="#">Blog</a></li>
 						<li><a href="#">Top Picks</a></li>
 
